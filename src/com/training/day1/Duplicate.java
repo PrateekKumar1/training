@@ -3,7 +3,7 @@ package com.training.day1;
 public class Duplicate {
 
 	public static void main(String[] args) {
-        String s = "capgemini";
+        String s = "hdbfsd";
         System.out.println(s + " " + check(s)); 
         s = "azprscd";
         System.out.println(s + " " + check(s)); 
