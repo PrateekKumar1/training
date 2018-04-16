@@ -11,28 +11,28 @@ public class FileManipulation {
     public static void main(String[] args) {
 
         File file = new File("./hii.txt");
-        FileInputStream fis = null;
+        FileInputStream fs = null;
 
         try {
-            fis = new FileInputStream(file);
+            fs = new FileInputStream(file);
 
            
             int content;
-            while ((content = fis.read()) != -1) {
+            while ((content = fs.read()) != -1) {
                 // convert to char and display it
                 System.out.print((char) content);
             }
             
             
-            File data = new File("./testout.txt");  
-            FileOutputStream file2 = new FileOutputStream(data);  
-            FilterOutputStream filter = new FilterOutputStream(file2);  
-            String s="Welcome to java.";      
-            byte b[]=s.getBytes();      
+            File data = new File("./hii.txt");  
+            FileOutputStream f2 = new FileOutputStream(data);  
+            FilterOutputStream filter = new FilterOutputStream(f2);  
+            String str="Welcome to java.";      
+            byte b[]=str.getBytes();      
             filter.write(b);     
             filter.flush();  
             filter.close();  
-            file2.close();  
+            f2.close();  
             System.out.println("Success...");  
             
                       
@@ -41,8 +41,8 @@ public class FileManipulation {
             e.printStackTrace();
         } finally {
             try {
-                if (fis != null)
-                    fis.close();
+                if (fs != null)
+                    fs.close();
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
