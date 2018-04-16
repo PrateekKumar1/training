@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Pallindrome {
 
-	public static void main(String[] args) throws IOException, NumberFormatException{
+	public static void main(String[] args) throws IOException, NumberFormatException,InputMismatchException{
 		Scanner rd=new Scanner(System.in);
 		int n,r,sum=0;
 		int vr; //initializing temporary variable for input storage
