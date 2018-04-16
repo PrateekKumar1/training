@@ -1,5 +1,8 @@
 package com.training.day1;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class DescPallindrome {
@@ -55,7 +58,7 @@ public class DescPallindrome {
 	         System.out.println("Entered string isn't a palindrome.");
 */
 		// checkPalindrome("malayalam");
-	    checkPalindrome("GeeksforGeeks");
+	    checkPalindrome("Java");
 	    checkPalindrome("121");
 	    checkPalindrome("12321");
 	}
