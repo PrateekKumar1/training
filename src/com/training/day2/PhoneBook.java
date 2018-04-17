@@ -52,71 +52,81 @@ public class PhoneBook extends Directory {
 		Scanner rd=new Scanner(System.in);
 		int n=0,ch,del,i;
 		String name1,name2,src,src1,src2;
+		char a;
 		int phone,src3;
 		List<Directory> dir = new ArrayList<Directory>();//Creating list of Directory 
-		Directory d=new Directory(i, name1, name2, phone);
+//		Directory d=new Directory(i, name1, name2, phone);
+		do
+		{
 		System.out.println("\t\tPhone Book\n1.add data and sort in ascending order\n2.remove data\n3.search by name\n4.search by number\r\n5.search by sr no");
 		System.out.print("Enter your choice\t");
 		ch=rd.nextInt();
 		switch(ch)
 		{
 		case 1:i=n+1;
+				
 			   System.out.print("Enter first name\t");
 			   name1=rd.next();
 			   System.out.print("Enter second name\t");
 			   name2=rd.next();
 			   System.out.print("Enter phone number\t");
 			   phone=rd.nextInt();
-			   d.id=i;
-			   d.fname=name1;
-			   d.lname=name2;
+			   Directory d1=new Directory(0, name1, name2, phone);
+//			   d.id=i;
+//			   d.fname=name1;
+//			   d.lname=name2;
 			   //if(phone.length()<=10) {
-			   d.phoneno=phone;
+//			   d.phoneno=phone;
 			   //}
-			   dir.add(d);
+			   dir.add(d1);
+			   System.out.print(d1.id+""+d1.fname+""+d1.lname+""+d1.phoneno+"\n");
 			   break;
 		case 2:System.out.print("Enter the id/phone number to delete data\t");
 				del=rd.nextInt();
-				if(del==d.id || src3==phone) {
+//				if(del==d.id || src3==phone) {
 				
-				dir.remove(id);
-				dir.remove(name1);
-				dir.remove(name2);
-				dir.remove(phone);
-				System.out.println("Details deleted");
-				}
+//				dir.remove(id);
+//				dir.remove(name1);
+//				dir.remove(name2);
+//				dir.remove(phone);
+//				System.out.println("Details deleted");
+//				}
 				break;
 		case 3:System.out.println("Enter name to be searched");
-				src=rd.next();
-				if(src==d.fname || src== d.lname)
-				{
-					for(Directory b:dir){  
+//				src=rd.next();
+//				if(src==d.fname || src== d.lname)
+//				{
+				for(Directory b:dir){  
 					    System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
 					    }  
-				}
+//				}
 				break;
 		case 4:System.out.println("Enter number to be searched");
-			   src3=rd.nextInt();
-			   if(src3==d.phoneno)
-			   {
-				 for(Directory b:dir){  
-				     System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
-				     }  
-			  }
+//			   src3=rd.nextInt();
+//			   if(src3==d.phoneno)
+//			   {
+//				 for(Directory b:dir){  
+//				     System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
+//				     }  
+//			  }
 			  break;
 		case 5:System.out.println("Enter number to be searched");
-		      src3=rd.nextInt();
-		      if(src3==d.phoneno)
-		      {
-			     for(Directory b:dir){  
-			        System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
-			     }  
-		      }
+//		      src3=rd.nextInt();
+//		      if(src3==d.phoneno)
+//		      {
+//			     for(Directory b:dir){  
+//			        System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
+//			     }  
+//		      }
 		      break;
 		 default:System.out.println("Invalid choice!!!!!");
 		 			break;
 		
 		}
+		System.out.println("Continue(Y/N)");
+        a =rd.next().charAt(0);
+
+} while(a=='Y'|| a=='y');
 		
 	}
 
