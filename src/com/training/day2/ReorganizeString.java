@@ -22,26 +22,26 @@ public class ReorganizeString {
 
 	
 	public static void main(String[] args) {
-		 String input, output;
-		 int d;
+		Scanner rd = new Scanner(System.in);
+		String s, output;
+		 int d,p,q;
 		 List<Character> characters = new ArrayList<>();
-
-	        Scanner scanner = new Scanner(System.in);
-
-	        System.out.print("Please enter the string: ");
-	        input = scanner.nextLine();
 	        
-	        for(int i = 0; i < input.length(); i++) {
-	            characters.add(input.charAt(i)); 
+	        System.out.print("Please enter the string: ");
+	        s = rd.nextLine();
+            for(int i = 0; i < s.length(); i++) {
+	            characters.add(s.charAt(i)); 
 	        }
 	        Iterator itr=characters.iterator();  
 	        while(itr.hasNext()){  
 	         System.out.print(itr.next());  
 	        }  
 	        System.out.println();  
-	        d=input.length()-2;
+	        d=s.length()-2;
 	        Collections.rotate(characters,-d) ;
+	       // Collections.shuffle(characters);
 	        System.out.print(characters);
+	        
 	}
 
 }
