@@ -24,46 +24,61 @@ import java.io.*;
  */
 class Directory {    
 int id=0;    
-String fname,lname,phoneno;    
+String fname,lname;
+int phoneno;    
   
-public Directory(int id, String fname, String lname, String phoneno) {    
+public Directory(int id, String fname, String lname, int phoneno) {    
     this.id = id;    
     this.fname = fname;    
     this.lname = lname;    
     this.phoneno = phoneno;    
     }    
 }    
-public class PhoneBook {
+public class PhoneBook extends Directory {
 
 	
+	/**
+	 * @param id
+	 * @param fname
+	 * @param lname
+	 * @param phoneno
+	 */
+	public PhoneBook(int id, String fname, String lname, int phoneno) {
+		super(id, fname, lname, phoneno);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void main(String[] args) {
 		Scanner rd=new Scanner(System.in);
-		int n=0,ch,del;
-		String name1,name2,phone,src;
+		int n=0,ch,del,i;
+		String name1,name2,src,src1,src2;
+		int phone,src3;
 		List<Directory> dir = new ArrayList<Directory>();//Creating list of Directory 
-		Directory d;
+		Directory d=new Directory(i, name1, name2, phone);
 		System.out.println("\t\tPhone Book\n1.add data and sort in ascending order\n2.remove data\n3.search by name\n4.search by number\r\n5.search by sr no");
 		System.out.print("Enter your choice\t");
 		ch=rd.nextInt();
 		switch(ch)
 		{
-		case 1:d.id=n+1;
+		case 1:i=n+1;
 			   System.out.print("Enter first name\t");
 			   name1=rd.next();
 			   System.out.print("Enter second name\t");
 			   name2=rd.next();
 			   System.out.print("Enter phone number\t");
-			   phone=rd.next();
+			   phone=rd.nextInt();
+			   d.id=i;
 			   d.fname=name1;
 			   d.lname=name2;
-			   if(phone.length()<=10) {
+			   //if(phone.length()<=10) {
 			   d.phoneno=phone;
-			   }
+			   //}
 			   dir.add(d);
 			   break;
 		case 2:System.out.print("Enter the id/phone number to delete data\t");
 				del=rd.nextInt();
-				if(del==d.id || src==phone) {
+				if(del==d.id || src3==phone) {
+				
 				dir.remove(id);
 				dir.remove(name1);
 				dir.remove(name2);
@@ -81,8 +96,8 @@ public class PhoneBook {
 				}
 				break;
 		case 4:System.out.println("Enter number to be searched");
-			   src=rd.next();
-			   if(src==d.phoneno)
+			   src3=rd.nextInt();
+			   if(src3==d.phoneno)
 			   {
 				 for(Directory b:dir){  
 				     System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
@@ -90,8 +105,8 @@ public class PhoneBook {
 			  }
 			  break;
 		case 5:System.out.println("Enter number to be searched");
-		      src=rd.next();
-		      if(src==d.phoneno)
+		      src3=rd.nextInt();
+		      if(src3==d.phoneno)
 		      {
 			     for(Directory b:dir){  
 			        System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
