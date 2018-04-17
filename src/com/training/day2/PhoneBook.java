@@ -63,23 +63,25 @@ public class PhoneBook extends Directory {
 		ch=rd.nextInt();
 		switch(ch)
 		{
-		case 1:i=n+1;
-				
+		case 1:
+			   i=n+1;
 			   System.out.print("Enter first name\t");
 			   name1=rd.next();
 			   System.out.print("Enter second name\t");
 			   name2=rd.next();
 			   System.out.print("Enter phone number\t");
 			   phone=rd.nextInt();
-			   Directory d1=new Directory(0, name1, name2, phone);
-//			   d.id=i;
+			   Directory d1=new Directory(i, name1, name2, phone);
 //			   d.fname=name1;
 //			   d.lname=name2;
 			   //if(phone.length()<=10) {
 //			   d.phoneno=phone;
 			   //}
+			   d1.id=i++;
 			   dir.add(d1);
-			   System.out.print(d1.id+""+d1.fname+""+d1.lname+""+d1.phoneno+"\n");
+			   System.out.print(d1.id+"\t"+d1.fname+"\t"+d1.lname+"\t"+d1.phoneno+"\n");
+			   
+			   //Collections.sort(dir);
 			   break;
 		case 2:System.out.print("Enter the id/phone number to delete data\t");
 				del=rd.nextInt();
@@ -93,13 +95,13 @@ public class PhoneBook extends Directory {
 //				}
 				break;
 		case 3:System.out.println("Enter name to be searched");
-//				src=rd.next();
-//				if(src==d.fname || src== d.lname)
-//				{
+			//	src=rd.next();
+			//	if(src==d1.fname || src== d1.lname)
+				//{
 				for(Directory b:dir){  
 					    System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
 					    }  
-//				}
+				//}
 				break;
 		case 4:System.out.println("Enter number to be searched");
 //			   src3=rd.nextInt();
