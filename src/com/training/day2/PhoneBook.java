@@ -56,7 +56,9 @@ public class PhoneBook {
 			   phone=rd.next();
 			   d.fname=name1;
 			   d.lname=name2;
+			   if(phone.length()<=10) {
 			   d.phoneno=phone;
+			   }
 			   dir.add(d);
 			   break;
 		case 2:System.out.print("Enter the id to delete data\t");
@@ -90,13 +92,17 @@ public class PhoneBook {
 		case 5:System.out.println("Enter number to be searched");
 		      src=rd.next();
 		      if(src==d.phoneno)
-		     {
-			 for(Directory b:dir){  
-			     System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
+		      {
+			     for(Directory b:dir){  
+			        System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
 			     }  
-		  }
-		  break;
+		      }
+		      break;
+		 default:System.out.println("Invalid choice!!!!!");
+		 			break;
+		
 		}
+		
 	}
 
 }
