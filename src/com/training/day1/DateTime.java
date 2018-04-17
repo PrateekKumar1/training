@@ -9,9 +9,9 @@ public class DateTime
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter start date in dd-MM-yyyy/HH:mm:ss format :");
+        System.out.println("Enter start date in dd-MM-yyyy/HH:mm:ss format :"); //1st time input
         String s1 = sc.next();
-        System.out.println("Enter end date in dd-MM-yyyy/HH:mm:ss format :");
+        System.out.println("Enter end date in dd-MM-yyyy/HH:mm:ss format :"); //2nd time input
         String s2 = sc.next();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy/HH:mm:ss");
         try
