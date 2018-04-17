@@ -23,7 +23,7 @@ import java.io.*;
  *
  */
 class Directory {    
-int id=0;    
+int id;    
 String fname,lname;
 int phoneno;    
   
@@ -45,7 +45,7 @@ public class PhoneBook extends Directory {
 	 */
 	public PhoneBook(int id, String fname, String lname, int phoneno) {
 		super(id, fname, lname, phoneno);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static void main(String[] args) {
