@@ -86,13 +86,28 @@ public class PhoneBook extends Directory {
 		case 2:System.out.print("Enter the id/phone number to delete data\t");
 				del=rd.nextInt();
 //				if(del==d.id || src3==phone) {
+/*				System.out.print("Enter the id/phone number to delete data\t");
+				del=rd.nextInt();
 				
+				Directory obj = null;
+				
+				dir.remove(876);
+				
+				dir.remove(obj);
+				
+				
+			dir.remove(name1);
+				dir.remove(name2);
+				dir.remove(phone);
+				System.out.println("Details deleted");
+				}
+
 //				dir.remove(id);
 //				dir.remove(name1);
 //				dir.remove(name2);
 //				dir.remove(phone);
 //				System.out.println("Details deleted");
-//				}
+//				}*/
 				break;
 		case 3:System.out.println("Enter name to be searched");
 			//	src=rd.next();
@@ -107,9 +122,9 @@ public class PhoneBook extends Directory {
 //			   src3=rd.nextInt();
 //			   if(src3==d.phoneno)
 //			   {
-//				 for(Directory b:dir){  
-//				     System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
-//				     }  
+			 for(Directory b:dir){  
+				     System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
+				     }  
 //			  }
 			  break;
 		case 5:System.out.println("Enter number to be searched");
