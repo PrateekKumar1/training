@@ -33,6 +33,7 @@ interface isPalindrome {
 	public static void main(String[] args) {
 		//lambda expression performing isOdd()
 		int n=202;
+		
 		isOdd odd=(oddno)->
 		{
 			if(n%2!=0)
@@ -40,7 +41,7 @@ interface isPalindrome {
 			else 
 				return false;
 		};
-		System.out.println(n+" is odd "+ odd.isOdd(n));
+		System.out.println(n+" is odd "+ odd.odd(n));
 		//lambda expression performing isPrime()
 				isPrime pr=(primeno)->
 				{
@@ -52,29 +53,29 @@ interface isPalindrome {
 					
 						return false;
 				};
-				System.out.println(n+" is prime "+ odd.isPrime(n));
+				System.out.println(n+" is prime "+ pr.primecomp(n));
 		//lambda expression performing isPalindrome()
-				int r,temp,sum=0;
+				
 				isPalindrome pl=(plmno)->
-				{
-					while(n>0)
+				{ 			
+					int n2,r,temp,sum=0;
+					n2=n;
+					temp=n2;
+					while(n2>0)
 					{
-						r=n%10;
+						r=n2%10;
 						sum=(sum*10)+r;
-						n=n/10;
+						n2=n2/10;
 					}
 					if(temp==sum) //Equating initial number with the reversed number
-					{
-						
-						System.out.print("true");
-					}
+						return true;
 					else
-					{
-								System.out.println("false");
-					}
+					
+						return false;
+					
 				
 				};
-				System.out.println(n+" is odd "+ odd.isOdd(n));
+				System.out.println(n+" is palindrome "+ pl.palindrome(n));
 	}
 
 }
