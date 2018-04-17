@@ -61,9 +61,9 @@ public class PhoneBook {
 			   }
 			   dir.add(d);
 			   break;
-		case 2:System.out.print("Enter the id to delete data\t");
+		case 2:System.out.print("Enter the id/phone number to delete data\t");
 				del=rd.nextInt();
-				if(del==d.id) {
+				if(del==d.id || src==phone) {
 				dir.remove(id);
 				dir.remove(name1);
 				dir.remove(name2);
