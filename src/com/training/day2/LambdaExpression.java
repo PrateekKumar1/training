@@ -20,20 +20,61 @@ import java.util.*;
  */
 
 public class LambdaExpression {
-interface EvenOdd {
-	void check(int a[]);
+interface isOdd {
+	public boolean odd(int a);
 }
+interface isPrime {
+	public boolean primecomp(int a);
+}
+interface isPalindrome {
+	public boolean palindrome(int a);
+}
+
 	public static void main(String[] args) {
-		int i,n,ch;
-		Scanner rd=new Scanner(System.in);
-		System.out.print("Enter the range\t");
-		n=rd.nextInt();
-		int[] arr=new int[n];
-		System.out.print("Enter elements");
-		for(i=0;i<n;i++) {
-			arr[i]=rd.nextInt();
-		}
-		
+		//lambda expression performing isOdd()
+		int n=202;
+		isOdd odd=(oddno)->
+		{
+			if(n%2!=0)
+				return true;
+			else 
+				return false;
+		};
+		System.out.println(n+" is odd "+ odd.isOdd(n));
+		//lambda expression performing isPrime()
+				isPrime pr=(primeno)->
+				{
+					for(int i=2;i<n/2;i++)
+					{
+						if(n%i==0)
+							return true;
+					}
+					
+						return false;
+				};
+				System.out.println(n+" is prime "+ odd.isPrime(n));
+		//lambda expression performing isPalindrome()
+				int r,temp,sum=0;
+				isPalindrome pl=(plmno)->
+				{
+					while(n>0)
+					{
+						r=n%10;
+						sum=(sum*10)+r;
+						n=n/10;
+					}
+					if(temp==sum) //Equating initial number with the reversed number
+					{
+						
+						System.out.print("true");
+					}
+					else
+					{
+								System.out.println("false");
+					}
+				
+				};
+				System.out.println(n+" is odd "+ odd.isOdd(n));
 	}
 
 }
