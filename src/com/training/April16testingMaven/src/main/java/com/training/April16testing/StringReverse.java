@@ -1,15 +1,15 @@
 /*  Program name        : 	Reverse Words in a string
  *	Program Description :	Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and 
  *							initial word order.
- *							Example	-> Input: "Let's take take Leetcode contest"
- *							 
+ *							Example	-> Input: "Let's take Leetcode contest"
+ *							           Output: "s'teL ekat edocteeL tsetnoc"
  *  Date created		:	16-April-2018
  */
 package com.training.April16testing;
 
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 public class StringReverse {
 
 	public static void main(String args[]) {

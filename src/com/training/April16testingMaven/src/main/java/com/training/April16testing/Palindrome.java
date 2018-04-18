@@ -22,23 +22,33 @@ public class Palindrome {
 		sum=0;
 		lps.info("Enter the number \t");
 		number=read.nextInt();
-		virtual=number; //passing the initial value to temporary variable
-		while(number>0)
-		{	
-			remainder=number%10;
-			sum=sum*10+remainder;
-			number=number/10;
-		}
-		if(virtual==sum) //Equating initial number with the reversed number
-		{			
-			lps.info("true");
-		}
-		else
-		{
-					lps.info("false");
-		}
-	
+		 if(isPalindrome(number))
+			 lps.info(number + " is a Palindrome Number.");
+	     else
+	         lps.info(number + " is not a Palindrome Number.");
 		
 	}
-
-}
+	//function to check number is Palindrome or not
+    public static boolean isPalindrome(int num)
+    {
+    	int rem,sum=0,temp;
+    	temp=num;
+    	while(num>0)
+    	  {     
+    	   rem=num%10;  //getting remainder  
+    	   sum=sum*10 +rem;    
+    	   num=num/10;
+    	  }
+    	  if(temp==sum)    
+    	  {
+    	   
+    	return true;    
+    	  
+    	  }
+    	  else 
+    	  {
+    	  return false;  
+    	  }
+    }
+     
+ }
