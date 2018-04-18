@@ -30,8 +30,10 @@ interface isPalindrome {
 
 	public static void main(String[] args) {
 		//lambda expression performing isOdd()
-		int n=202;
-		
+		Scanner rd=new Scanner(System.in);
+		int n;
+		System.out.println("Enter the number\t ");
+		n=rd.nextInt();
 		isOdd odd=(oddno)->
 		{
 			if(n%2!=0)
