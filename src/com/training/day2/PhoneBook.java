@@ -2,8 +2,14 @@
  * 
  */
 package com.training.day2;
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+
+
 /**
  * ***************************************************************************************************************************** 
  *	Program name        : 	Phone Book
@@ -22,29 +28,44 @@ import java.io.*;
  *  ****************************************************************************************************************************
  *
  */
-class Directory {    
+class Directory  {    
 private static int id = 1;    
-private String fname,lname;
+private String fname;
+private String lname;
 private int phoneno;    
   
-public Directory(int id, String fname, String lname, int phoneno) {    
-    this.id = id;    
+public Directory(String fname, String lname, int phoneno) {    
+       
     this.fname = fname;    
     this.lname = lname;    
     this.phoneno = phoneno;    
     }    
+
+
+public String getFname() {
+	return fname;
+	}
+
+public String getLname() {
+	return lname;
+	}
+
+public int getNumber() {
+	return phoneno;
+	}
+
+public int getId() {
+	return id++;
+	}
 }    
+
 public class PhoneBook extends Directory {
 
 	
-	/**
-	 * @param id
-	 * @param fname
-	 * @param lname
-	 * @param phoneno
-	 */
-	public PhoneBook(int id, String fname, String lname, int phoneno) {
-		super(id, fname, lname, phoneno);
+	
+
+	public PhoneBook(String name1, String name2, int phone) {
+		super(name1, name2, phone);
 		
 	}
 
@@ -54,7 +75,7 @@ public class PhoneBook extends Directory {
 		String name1,name2,src,src1,src2;
 		char a;
 		int phone = 0,src3;
-		List<Directory> dir = new ArrayList<Directory>();//Creating list of Directory 
+		List<Directory> dir = new ArrayList<>();//Creating list of Directory 
 		
 //		Directory d=new Directory(i, name1, name2, phone);
 		do
@@ -65,41 +86,22 @@ public class PhoneBook extends Directory {
 		switch(ch)
 		{
 		case 1:
-			   i=n+1;
+			   
 			   System.out.print("Enter first name\t");
 			   name1=rd.next();
 			   System.out.print("Enter second name\t");
 			   name2=rd.next();
 			   System.out.print("Enter phone number\t");
 			   phone=rd.nextInt();
-			   Directory d1=new Directory(i, name1, name2, phone);
-//			   d.fname=name1;
-//			   d.lname=name2;
-			   //if(phone.length()<=10) {
-//			   d.phoneno=phone;
-			   //}
-			   d1.id=i++;
+			   Directory d1=new Directory(name1, name2, phone);
 			   dir.add(d1);
-			   System.out.print(d1.id+"\t"+d1.fname+"\t"+d1.lname+"\t"+d1.phoneno+"\n");
-			   
-			   //Collections.sort(dir);
+			   System.out.println("Added successfullyy!!");
+			 // Collections.sort(dir);
 			   break;
 		case 2:System.out.print("Enter the id/phone number to delete data\t");
 				del=rd.nextInt();
-      		//	if(del==d1.id || del==phone) {
-/*				Directory obj = null;
-				dir.remove(876);
-				dir.remove(obj);
-					
-			dir.remove(name1);
-				dir.remove(name2);
-				dir.remove(phone);
-				System.out.println("Details deleted");
-				}*/
-//				dir.remove(id);
-		/*		dir.remove(name1);
-				dir.remove(name2);
-		    	dir.remove(phone);*/
+				//dir.remove(RemoveById);
+				System.out.println("Record deleted successfully");
     			System.out.println("Details deleted");
 			//	}
 				break;
