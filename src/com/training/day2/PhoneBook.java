@@ -23,9 +23,9 @@ import java.io.*;
  *
  */
 class Directory {    
-int id;    
-String fname,lname;
-int phoneno;    
+private static int id = 1;    
+private String fname,lname;
+private int phoneno;    
   
 public Directory(int id, String fname, String lname, int phoneno) {    
     this.id = id;    
@@ -86,7 +86,7 @@ public class PhoneBook extends Directory {
 			   break;
 		case 2:System.out.print("Enter the id/phone number to delete data\t");
 				del=rd.nextInt();
-      			if(del==d1.id || del==phone) {
+      		//	if(del==d1.id || del==phone) {
 /*				Directory obj = null;
 				dir.remove(876);
 				dir.remove(obj);
@@ -97,11 +97,11 @@ public class PhoneBook extends Directory {
 				System.out.println("Details deleted");
 				}*/
 //				dir.remove(id);
-				dir.remove(name1);
+		/*		dir.remove(name1);
 				dir.remove(name2);
-		    	dir.remove(phone);
+		    	dir.remove(phone);*/
     			System.out.println("Details deleted");
-				}
+			//	}
 				break;
 		case 3:System.out.println("Enter name to be searched");
 				src=rd.next();
