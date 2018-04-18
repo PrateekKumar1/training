@@ -50,11 +50,12 @@ public class PhoneBook extends Directory {
 
 	public static void main(String[] args) {
 		Scanner rd=new Scanner(System.in);
-		int n=0,ch,del,i;
-		String name1,name2,src,src1,src2;
+		int n=0,ch,del,i = 0;
+		String name1 = null,name2 = null,src,src1,src2;
 		char a;
-		int phone,src3;
+		int phone = 0,src3;
 		List<Directory> dir = new ArrayList<Directory>();//Creating list of Directory 
+		Directory d=new Directory(i, name1, name2, phone);
 //		Directory d=new Directory(i, name1, name2, phone);
 		do
 		{
@@ -71,52 +72,45 @@ public class PhoneBook extends Directory {
 			   name2=rd.next();
 			   System.out.print("Enter phone number\t");
 			   phone=rd.nextInt();
-			   Directory d1=new Directory(i, name1, name2, phone);
+//			   Directory d1=new Directory(i, name1, name2, phone);
 //			   d.fname=name1;
 //			   d.lname=name2;
 			   //if(phone.length()<=10) {
 //			   d.phoneno=phone;
 			   //}
-			   d1.id=i++;
-			   dir.add(d1);
-			   System.out.print(d1.id+"\t"+d1.fname+"\t"+d1.lname+"\t"+d1.phoneno+"\n");
+			   d.id=i++;
+			   dir.add(d);
+			   System.out.print(d.id+"\t"+d.fname+"\t"+d.lname+"\t"+d.phoneno+"\n");
 			   
 			   //Collections.sort(dir);
 			   break;
 		case 2:System.out.print("Enter the id/phone number to delete data\t");
 				del=rd.nextInt();
-//				if(del==d.id || del==phone) {
-/*				System.out.print("Enter the id/phone number to delete data\t");
-				del=rd.nextInt();
-				
-				Directory obj = null;
-				
+      			if(del==d.id || del==phone) {
+/*				Directory obj = null;
 				dir.remove(876);
-				
 				dir.remove(obj);
-				
-				
+					
 			dir.remove(name1);
 				dir.remove(name2);
 				dir.remove(phone);
 				System.out.println("Details deleted");
-				}
-
+				}*/
 //				dir.remove(id);
-//				dir.remove(name1);
-//				dir.remove(name2);
-//				dir.remove(phone);
-//				System.out.println("Details deleted");
-//				}*/
+				dir.remove(name1);
+				dir.remove(name2);
+		    	dir.remove(phone);
+    			System.out.println("Details deleted");
+				}
 				break;
 		case 3:System.out.println("Enter name to be searched");
 				src=rd.next();
-				if(src==d1.fname || src== d1.lname)
-				{
+	//			if(src==d.fname || src== d1.lname)
+	//			{
 				for(Directory b:dir){  
 					    System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
 					    }  
-				}
+	//			}
 				break;
 		case 4:System.out.println("Enter phone number to be searched");
 			   src3=rd.nextInt();
