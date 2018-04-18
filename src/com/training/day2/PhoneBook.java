@@ -29,7 +29,7 @@ import java.util.Iterator;
  *
  */
 class Directory  {    
-private static int id = 1;    
+private static int id = 0;    
 private String fname;
 private String lname;
 private int phoneno;    
