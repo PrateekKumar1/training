@@ -6,7 +6,7 @@ import java.util.*;
 import java.io.*;
 /**
  * ***************************************************************************************************************************** 
- *	Program name        : 	Phone Book 
+ *	Program name        : 	Phone Book
  *	Program Description :	You are given a phone book that consists of people's names and their  phone number. After that 
  *                         you will be given some person's name as query. For each query, print the phone number of that person.
  *                         Create a menu:
@@ -51,11 +51,11 @@ public class PhoneBook extends Directory {
 	public static void main(String[] args) {
 		Scanner rd=new Scanner(System.in);
 		int n=0,ch,del,i = 0;
-		String name1 = null,name2 = null,src,src1,src2;
+		String name1,name2,src,src1,src2;
 		char a;
 		int phone = 0,src3;
 		List<Directory> dir = new ArrayList<Directory>();//Creating list of Directory 
-		Directory d=new Directory(i, name1, name2, phone);
+		
 //		Directory d=new Directory(i, name1, name2, phone);
 		do
 		{
@@ -72,21 +72,21 @@ public class PhoneBook extends Directory {
 			   name2=rd.next();
 			   System.out.print("Enter phone number\t");
 			   phone=rd.nextInt();
-//			   Directory d1=new Directory(i, name1, name2, phone);
+			   Directory d1=new Directory(i, name1, name2, phone);
 //			   d.fname=name1;
 //			   d.lname=name2;
 			   //if(phone.length()<=10) {
 //			   d.phoneno=phone;
 			   //}
-			   d.id=i++;
-			   dir.add(d);
-			   System.out.print(d.id+"\t"+d.fname+"\t"+d.lname+"\t"+d.phoneno+"\n");
+			   d1.id=i++;
+			   dir.add(d1);
+			   System.out.print(d1.id+"\t"+d1.fname+"\t"+d1.lname+"\t"+d1.phoneno+"\n");
 			   
 			   //Collections.sort(dir);
 			   break;
 		case 2:System.out.print("Enter the id/phone number to delete data\t");
 				del=rd.nextInt();
-      			if(del==d.id || del==phone) {
+      			if(del==d1.id || del==phone) {
 /*				Directory obj = null;
 				dir.remove(876);
 				dir.remove(obj);
@@ -114,21 +114,21 @@ public class PhoneBook extends Directory {
 				break;
 		case 4:System.out.println("Enter phone number to be searched");
 			   src3=rd.nextInt();
-			   if(src3==d.phoneno)
-			   {
+			//   if(src3==d1.phoneno)
+		//	   {
 			 for(Directory b:dir){  
 				     System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
 				     }  
-			  }
+			//  }
 			  break;
 		case 5:System.out.println("Enter number to be searched");
 		      src3=rd.nextInt();
-		      if(src3==d.id)
-		      {
+		   //   if(src3==d.id)
+		  //    {
 			     for(Directory b:dir){  
 			        System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
 			     }  
-		      }
+		  //    }
 		      break;
 		 default:System.out.println("Invalid choice!!!!!");
 		 			break;
