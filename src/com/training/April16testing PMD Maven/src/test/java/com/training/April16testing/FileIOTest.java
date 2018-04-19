@@ -11,8 +11,37 @@ public class FileIOTest {
 	{
 		FileManipulation srt = new FileManipulation(); // Palindrome is tested
 
-	// assert statements
-	//assertEquals("true", srt.isReverse("Hello World"),true);
+		
+	    @Test
+	    public void throwsErrorWhenTargetFileExists() throws IOException {
+	        // arrange
+	        
+	    }
+
+	    @Test
+	    public void writesContentToFile() throws IOException {
+	     /*   // arrange
+	        File output = temporaryFolder.newFolder("reports")
+	                .toPath()
+	                .resolve("output.txt")
+	                .toFile();
+
+	        // act
+	        fileWriter.writeTo(output.getPath(), "test");
+
+	        // assert
+	        assertThat(output)
+	                .hasContent("test")
+	                .hasExtension("txt")
+	                .hasParent(resolvePath("reports"));*/
+	    }
+
+	//    private String resolvePath(String folder) {
+	   /*     return temporaryFolder
+	                .getRoot().toPath()
+	                .resolve(folder)
+	                .toString();*/
+	    }
 	
 	}
 
