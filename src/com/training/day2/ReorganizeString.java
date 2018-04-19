@@ -41,13 +41,13 @@ public class ReorganizeString {
 	        Collections.rotate(characters,-d) ;
 	       // Collections.shuffle(characters);
 	        System.out.print(characters);
-	       /* for (p = 0; p < s.length()-1; p++) {
+	        for (p = 0; p < s.length()-1; p++) {
 	            for (q = p+1; q < s.length(); q++) {
 	                if (characters[p].equals(characters[q]) && p != q) {
 	                    return true;
 	                }
 	            }
-	        }*/
+	        }
 
 
 	
