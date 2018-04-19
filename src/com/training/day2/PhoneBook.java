@@ -1,14 +1,3 @@
-/**
- * 
- */
-package com.training.day2;
-import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-
 
 /**
  * ***************************************************************************************************************************** 
@@ -28,46 +17,50 @@ import java.util.Iterator;
  *  ****************************************************************************************************************************
  *
  */
+package com.training.day2;
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+
+
 class Directory  {    
-private static int id = 0;    
-private String fname;
-private String lname;
-private int phoneno;    
-  
-public Directory(String fname, String lname, int phoneno) {    
-       
-    this.fname = fname;    
-    this.lname = lname;    
-    this.phoneno = phoneno;    
-    }    
+	private String fname, lname;
+	private int number;
+	private static int id = 1;
 
+	public Directory(String fname, String lname, int number) {
+	this.fname = fname;
+	this.lname = lname;
+	this.number = number;
 
-public String getFname() {
+	}
+
+	public String getFname() {
 	return fname;
 	}
 
-public String getLname() {
+	public String getLname() {
 	return lname;
 	}
 
-public int getNumber() {
-	return phoneno;
+	public int getNumber() {
+	return number;
 	}
 
-public int getId() {
+	public int getId() {
 	return id++;
 	}
+
 }    
 
-public class PhoneBook extends Directory {
-
-	
-	
-
-	public PhoneBook(String name1, String name2, int phone) {
-		super(name1, name2, phone);
+public class PhoneBook {
+//	public PhoneBook(String name1, String name2, int phone) {
+//		super(name1, name2, phone);
 		
-	}
+//	}
 
 	public static void main(String[] args) {
 		Scanner rd=new Scanner(System.in);
@@ -98,22 +91,31 @@ public class PhoneBook extends Directory {
 			   System.out.println("Added successfullyy!!");
 			 // Collections.sort(dir);
 			   break;
-		case 2:System.out.print("Enter the id/phone number to delete data\t");
-				del=rd.nextInt();
-				//dir.remove(RemoveById);
-				System.out.println("Record deleted successfully");
-    			System.out.println("Details deleted");
-			//	}
-				break;
-		case 3:System.out.println("Enter name to be searched");
-				src=rd.next();
-	//			if(src==d.fname || src== d1.lname)
-	//			{
-				for(Directory b:dir){  
-					    System.out.println(b.id+" "+b.fname+" "+b.lname+" "+b.phoneno);  
-					    }  
-	//			}
-				break;
+		case 2:System.out.println("Remove the details of a person");
+			Scanner sc1 = new Scanner(System.in);
+			int RemoveById = sc1.nextInt();
+			dir.remove(RemoveById);
+			System.out.println("Record deleted successfully");
+			break;
+
+		case 3:System.out.println("Search the details of a person by name");
+		Scanner sc11 = new Scanner(System.in);
+		String SearchByName = sc11.next();
+		Iterator<Directory> itr = dir.iterator();
+		String isFound = null;
+		while (itr.hasNext()) {
+		Directory d11 = itr.next();
+		isFound = d11.getFname();
+		if (isFound.equalsIgnoreCase(SearchByName)) {
+		// System.out.println("Record found/n");
+		System.out
+		.println(d11.getFname() + " " + d11.getLname() + " " + d11.getNumber() + " " + d11.getId());
+		} else
+		System.out.println("Record not found");
+		}
+		break;
+		}
+				
 		case 4:System.out.println("Enter phone number to be searched");
 			   src3=rd.nextInt();
 			//   if(src3==d1.phoneno)
