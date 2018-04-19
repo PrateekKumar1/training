@@ -1,19 +1,20 @@
-
 /**
- * ****************************************************************************************************************** 
- *	Program name        : 	Lambda Expression
- *	Program Description :	Write the following methods that return a lambda expression performing a specific action-
- *                          PerformOperation isOdd() : The lambda expression must return true if a number is odd or 
- *                          false if it is even.
- *                          PerformOperation isPrime() : The lambda expression must return true if a number is prime
- *                          or false if it is composite.
- *                          PerformOperation isPalindrome() : The lambda expression must return true if a number is a
- *                          palindrome or false if it is not. 
- *                         
- *  *****************************************************************************************************************
- *
- */
+* ****************************************************************************************************************** 
+*	Program name        : 	Lambda Expression
+*	Program Description :	Write the following methods that return a lambda expression performing a specific action-
+*                          PerformOperation isOdd() : The lambda expression must return true if a number is odd or 
+*                          false if it is even.
+*                          PerformOperation isPrime() : The lambda expression must return true if a number is prime
+*                          or false if it is composite.
+*                          PerformOperation isPalindrome() : The lambda expression must return true if a number is a
+*                          palindrome or false if it is not. 
+*                         
+*  *****************************************************************************************************************
+*
+*/
 package com.training.day2;
+
+
 import java.util.*;
 
 
@@ -30,52 +31,58 @@ interface isPalindrome {
 
 	public static void main(String[] args) {
 		//lambda expression performing isOdd()
-		Scanner rd=new Scanner(System.in);
-		int n;
+		Scanner read=new Scanner(System.in);
+		int numb;
 		System.out.println("Enter the number\t ");
-		n=rd.nextInt();
+		numb=read.nextInt();
 		isOdd odd=(oddno)->
 		{
-			if(n%2!=0)
+			if(numb%2!=0)
+			{
 				return true;
+			}
 			else 
+			{
 				return false;
+			}
 		};
-		System.out.println(n+" is odd "+ odd.odd(n));
+		System.out.println(numb+" is odd "+ odd.odd(numb));
 		//lambda expression performing isPrime()
-				isPrime pr=(primeno)->
+				isPrime prim=(primeno)->
 				{
-					for(int i=2;i<n/2;i++)
+					for(int i=2;i<numb/2;i++)
 					{
-						if(n%i==0)
+						if(numb%i==0)
 							return true;
 					}
 					
 						return false;
 				};
-				System.out.println(n+" is prime "+ pr.primecomp(n));
+				System.out.println(numb+" is prime "+ prim.primecomp(numb));
 		//lambda expression performing isPalindrome()
 				
-				isPalindrome pl=(plmno)->
+				isPalindrome plnd=(plmno)->
 				{ 			
-					int n2,r,temp,sum=0;
-					n2=n;
-					temp=n2;
-					while(n2>0)
+					int numb2,revs,temp,sum=0;
+					numb2=numb;
+					temp=numb2;
+					while(numb2>0)
 					{
-						r=n2%10;
-						sum=(sum*10)+r;
-						n2=n2/10;
+						revs=numb2%10;
+						sum=sum*10+revs;
+						numb2=numb2/10;
 					}
-					if(temp==sum) //Equating initial number with the reversed number
+					if(temp==sum) { //Equating initial number with the reversed number
 						return true;
-					else
+					}
+					else {
 					
 						return false;
+					}
 					
 				
 				};
-				System.out.println(n+" is palindrome "+ pl.palindrome(n));
+				System.out.println(numb+" is palindrome "+ plnd.palindrome(numb));
 	}
 
 }
