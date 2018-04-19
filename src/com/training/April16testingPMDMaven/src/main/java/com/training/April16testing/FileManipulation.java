@@ -45,14 +45,8 @@ public class FileManipulation {
 
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (fs != null)
-                    fs.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
+        } 
+        
            
         
     }
