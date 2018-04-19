@@ -9,7 +9,7 @@ public class FileIOTest {
 	public void teststringreverse()
 
 	{
-		FileManipulation srt = new FileManipulation(); // Palindrome is tested
+		FileManipulation srt = new FileManipulation(); 
 
 	// assert statements
 	//assertEquals("true", srt.isReverse("Hello World"),true);
