@@ -32,12 +32,11 @@ public class FileManipulation {
             
             File data = new File("./hii.txt");  
             FileOutputStream f2 = new FileOutputStream(data);  
-            FilterOutputStream filter = new FilterOutputStream(f2);  
+            FilterOutputStream fil = new FilterOutputStream(f2);  
             String str="Welcome to java.";      
             byte b[]=str.getBytes();      
-            filter.write(b);     
-            filter.flush();  
-            filter.close();  
+            fil.write(b);     
+            fil.close();  
             f2.close();  
             System.out.println("Success...");  
             
