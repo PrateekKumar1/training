@@ -92,27 +92,26 @@ public class PhoneBook {
 			 // Collections.sort(dir);
 			   break;
 		case 2:System.out.println("Remove the details of a person");
-			Scanner sc1 = new Scanner(System.in);
-			int RemoveById = sc1.nextInt();
-			dir.remove(RemoveById);
-			System.out.println("Record deleted successfully");
-			break;
+				Scanner sc1 = new Scanner(System.in);
+				int RemoveById = sc1.nextInt();
+				dir.remove(RemoveById);
+				System.out.println("Record deleted successfully");
+				break;
 
 		case 3:System.out.println("Search the details of a person by name");
-		Scanner sc11 = new Scanner(System.in);
-		String SearchByName = sc11.next();
-		Iterator<Directory> itr = dir.iterator();
-		String isFound = null;
-		while (itr.hasNext()) {
-		Directory d11 = itr.next();
-		isFound = d11.getFname();
-		if (isFound.equalsIgnoreCase(SearchByName)) {
-		// System.out.println("Record found/n");
-		System.out
-		.println(d11.getFname() + " " + d11.getLname() + " " + d11.getNumber() + " " + d11.getId());
-		} else
-		System.out.println("Record not found");
-		}
+				Scanner sc11 = new Scanner(System.in);
+				String SearchByName = sc11.next();
+				Iterator<Directory> itr = dir.iterator();
+				String isFound = null;
+				while (itr.hasNext()) {
+					Directory d11 = itr.next();
+					isFound = d11.getFname();
+					if (isFound.equalsIgnoreCase(SearchByName)) {
+						 System.out.println("Record found/n");
+						System.out.println(d11.getFname() + " " + d11.getLname() + " " + d11.getNumber() + " " + d11.getId());
+					} else
+				System.out.println("Record not found");
+				}
 		break;
 		}
 				
