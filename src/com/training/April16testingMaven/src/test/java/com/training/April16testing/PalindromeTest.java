@@ -15,7 +15,8 @@ public class PalindromeTest {
 	// assert statements
 	assertEquals("true", test.isPalindrome(121), 1);
 	assertEquals("false", test.isPalindrome(456), 0);
-	
+	assertEquals("false", test.isPalindrome(-121), 0);
+	assertEquals("false", test.isPalindrome(-456), 0);
 	}
 	
 
