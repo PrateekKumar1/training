@@ -9,7 +9,7 @@ public class StringRevTest {
 	public void teststringreverse()
 
 	{
-		StringReverse srt = new StringReverse(); 
+		StringReverse srt = new StringReverse(); // Palindrome is tested
 
 	// assert statements
 	assertEquals("true", srt.isReverse("Hello World"),true);

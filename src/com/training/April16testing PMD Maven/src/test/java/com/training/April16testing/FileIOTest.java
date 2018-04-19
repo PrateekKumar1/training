@@ -9,17 +9,17 @@ public class FileIOTest {
 	public void teststringreverse()
 
 	{
-		FileManipulation srt = new FileManipulation(); 
+	//	FileManipulation srt = new FileManipulation(); // Palindrome is tested
 
 		
-	    @Test
-	    public void throwsErrorWhenTargetFileExists() throws IOException {
+	 //   @Test
+	//    public void throwsErrorWhenTargetFileExists() throws IOException {
 	        // arrange
 	        
 	    }
 
-	    @Test
-	    public void writesContentToFile() throws IOException {
+	 //   @Test
+	//    public void writesContentToFile() throws IOException {
 	     /*   // arrange
 	        File output = temporaryFolder.newFolder("reports")
 	                .toPath()
@@ -34,15 +34,15 @@ public class FileIOTest {
 	                .hasContent("test")
 	                .hasExtension("txt")
 	                .hasParent(resolvePath("reports"));*/
-	    }
+	  //  }
 
 	//    private String resolvePath(String folder) {
 	   /*     return temporaryFolder
 	                .getRoot().toPath()
 	                .resolve(folder)
 	                .toString();*/
-	    }
+	 //   }
 	
-	}
+	//}
 
 }

@@ -14,7 +14,7 @@ public class StringReverse {
 
 	public static void main(String[] args) {
 		Scanner read=new Scanner(System.in);
-		//String str1 = "Let's take Leetcode contest"; // Given string
+		String str1 = "Let's take Leetcode contest"; // Given string
 		String strn=read.next();
 		if(isReverse(strn))
 		{
