@@ -17,12 +17,14 @@ public class Calculator {
 	 */
 	public static int power(int numrs,int pows)
 	{
-		if (pows != 0)
+		if (pows == 0)
 		{
-        return numrs * power(numrs, pows - 1);
+			return 1;
+        
+		}
 		
     else {
-        return 1;
+    	return numrs * power(numrs, pows - 1);
     	}
 	}
 	public static void main(String[] args) {
