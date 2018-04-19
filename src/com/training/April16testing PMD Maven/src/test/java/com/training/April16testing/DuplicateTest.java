@@ -9,7 +9,7 @@ public class DuplicateTest {
 	public void testduplicate()
 
 	{
-		Duplicate dpt = new Duplicate(); // Palindrome is tested
+		Duplicate dpt = new Duplicate(); 
 
 	// assert statements
 		assertEquals("true", dpt.check("transylvania"),true);
