@@ -12,15 +12,12 @@ import java.util.logging.Logger;
 
 public class Palindrome {
 	
-	public static void main(String args[]) { 
+	public static void main(String[] args) { 
         final Scanner read=new Scanner(System.in);
         final Logger lps=Logger.getLogger(Palindrome.class.getName());
 		int number;
-		int remainder;
-		int sum;
-		int virtual; //initializing temporary variable for input storage
-		sum=0;
-		lps.info("Enter the number \t");
+		
+	//	lps.info("Enter the number \t");
 		number=read.nextInt();
 		 if(isPalindrome(number))
 			 lps.info(number + " is a Palindrome Number.");
