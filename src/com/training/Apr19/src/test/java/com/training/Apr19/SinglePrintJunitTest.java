@@ -25,5 +25,11 @@ test=new SinglePrintMethod();
 	String[] sar=new String[] {"Hello","world","Welcome to java"};
 	assertEquals("True",2,test.printarray(sar);
 }
+//Test case3
+@Test throws IOException
+{
+	String[] sar=new String[] {1,2,"world","Welcome to java"};
+	assertEquals("True",2,test.printarray(sar);
+}
 
 }
