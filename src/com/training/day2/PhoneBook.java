@@ -74,70 +74,69 @@ public class PhoneBook {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Scanner rd=new Scanner(System.in);
-		int n=0,ch,del,i = 0;
-		String name1,name2,src,src1,src2;
-		char a;
-		int phone = 0,src3;
-		List<Directory> dir = new ArrayList<>();//Creating list of Directory 
+	Scanner rd=new Scanner(System.in);
+	int n=0,ch,del,i = 0;
+	String name1;
+	String name2;
+	String src;
+	String src1;
+	int src2;
+	char a;
+	int phone = 0,src3;
+	List<Directory> dir = new ArrayList<>();//Creating list of Directory 
 		
 //		Directory d=new Directory(i, name1, name2, phone);
-		do
-		{
-		System.out.println("\t\tPhone Book\n1.add data and sort in ascending order\n2.remove data\n3.search by name\n4.search by number\r\n5.search by sr no");
-		System.out.print("Enter your choice\t");
-		ch=rd.nextInt();
-		switch(ch)
-		{
-		case 1:
-			   
-			   System.out.print("Enter first name\t");
-			   name1=rd.next();
-			   System.out.print("Enter second name\t");
-			   name2=rd.next();
-			   System.out.print("Enter phone number\t");
-			   phone=rd.nextInt();
-			   Directory d1=new Directory(name1, name2, phone);
-			   dir.add(d1);
-			   System.out.println("Added successfullyy!!");
-			 // Collections.sort(dir);
-			   break;
-		case 2:System.out.println("Remove the details of a person");
-				Scanner sc1 = new Scanner(System.in);
-				final int RemoveById = sc1.nextInt();
-				dir.remove(RemoveById);
-				System.out.println("Record deleted successfully");
-				break;
+	do{
+	System.out.println("\t\tPhone Book\n1.add data and sort in ascending order\n2.remove data\n3.search by name\n4.search by number\r\n5.search by sr no");
+	System.out.print("Enter your choice\t");
+	ch=rd.nextInt();
+	switch(ch)
+	{
+	case 1:
+	 System.out.print("Enter first name\t");
+	 name1=rd.next();
+	 System.out.print("Enter second name\t");
+	 name2=rd.next();
+	 System.out.print("Enter phone number\t");
+	 phone=rd.nextInt();
+	 Directory d1=new Directory(name1, name2, phone);
+	 dir.add(d1);
+	 System.out.println("Added successfullyy!!");
+	 // Collections.sort(dir);
+	 break;
+	case 2:System.out.println("Remove the details of a person");
+	 del = rd.nextInt();
+	 dir.remove(del);
+	 System.out.println("Record deleted successfully");
+	 break;
 
-		case 3:System.out.println("Search the details of a person by name");
-				Scanner sc11 = new Scanner(System.in);
-				String SearchByName = sc11.next();
-				final Iterator<Directory> itr = dir.iterator();
-				String isFound = null;
-				while (itr.hasNext()) {
-					Directory d11 = itr.next();
-					isFound = d11.getFname();
-					if (isFound.equalsIgnoreCase(SearchByName)) {
-		// System.out.println("Record found/n");
-						System.out.println(d11.getFname() + " " + d11.getLname() + " " + d11.getNumber() + " " + d11.getId());
-					} else {
-				System.out.println("Record not found");
-					}
-				}
-		break;
-		
-				
-		case 4:System.out.println("Enter phone number to be searched");
-			   src3=rd.nextInt();
-			//   if(src3==d1.phoneno)
-		//	   {
-			 for(Directory b:dir){  
-				 System.out.println(b.getFname() + " " + b.getLname() + " " + b.getNumber() + " " +b.getId());
-				     }  
+	case 3:System.out.println("Search the details of a person by name");
+	src = rd.next();
+	 final Iterator<Directory> itr = dir.iterator();
+	 src = null;
+	 while (itr.hasNext()) {
+	 Directory d11 = itr.next();
+	 src = d11.getFname();
+	 if (src.equalsIgnoreCase(src)) {
+	 // System.out.println("Record found/n");
+	 System.out.println(d11.getFname() + " " + d11.getLname() + " " + d11.getNumber() + " " + d11.getId());
+	 } 
+	 else {
+	 System.out.println("Record not found");
+		}
+	 }
+	 break;
+	 case 4:System.out.println("Enter phone number to be searched");
+	 src3=rd.nextInt();
+	//   if(src3==d1.phoneno)
+	//	   {
+	for(Directory b:dir){  
+	System.out.println(b.getFname() + " " + b.getLname() + " " + b.getNumber() + " " +b.getId());
+	}  
 			//  }
-			  break;
-		case 5:System.out.println("Enter number to be searched");
-		      src3=rd.nextInt();
+	break;
+	case 5:System.out.println("Enter number to be searched");
+	src3=rd.nextInt();
 		   //   if(src3==d.id)
 		  //    {
 			     for(Directory b:dir){  
@@ -145,12 +144,12 @@ public class PhoneBook {
 			     }  
 		  //    }
 		      break;
-		 default:System.out.println("Invalid choice!!!!!");
+	default:System.out.println("Invalid choice!!!!!");
 		 			break;
 		
 		}
-		System.out.println("Continue(Y/N)");
-        a =rd.next().charAt(0);
+	System.out.println("Continue(Y/N)");
+    a =rd.next().charAt(0);
 
 } while(a=='Y'|| a=='y');
 		
