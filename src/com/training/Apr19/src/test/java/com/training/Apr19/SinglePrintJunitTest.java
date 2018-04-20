@@ -13,5 +13,17 @@ public void setup()
 {
 test=new SinglePrintMethod();
 } 
+//Test case1
 @Test
+{
+	Integer iar[]=new Integer[] {1,4,7,8,9};
+	assertEquals("True",1,test.printarray(iar);
+}
+//Test case2
+@Test
+{
+	String[] sar=new String[] {"Hello","world","Welcome to java"};
+	assertEquals("True",2,test.printarray(sar);
+}
+
 }
