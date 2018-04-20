@@ -14,9 +14,9 @@ package com.training.Apr19;
 import java.util.Scanner;
 
 /**
- * @author trainee
- * Generic method printarray is printing integer array list and string array list together.
- */
+* @author trainee
+* Generic method printarray is printing integer array list and string array list together.
+*/
 public class SinglePrintMethod {
 
 	/**

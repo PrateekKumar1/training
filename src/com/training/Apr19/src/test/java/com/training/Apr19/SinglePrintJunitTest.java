@@ -13,5 +13,5 @@ public void setup()
 {
 test=new SinglePrintMethod();
 } 
-
+@Test
 }
