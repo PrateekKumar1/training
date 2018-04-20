@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-class SinglePrintMethod
+class FileManipulation
 {
  
 	public void Readmyfile() throws IOException
@@ -42,7 +42,7 @@ class SinglePrintMethod
  
 
 	public static void main(String args[]) {    
-		SinglePrintMethod m = new SinglePrintMethod();
+		FileManipulation m = new FileManipulation();
 		try {
 			m.Readmyfile();
 			m.writemyfile();
