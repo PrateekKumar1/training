@@ -10,7 +10,7 @@ import org.junit.Test;
 
 
 public class CalcTest {
-Calculator test = new Calculator(); // Calculator is tested
+Calculator test = null; // Calculator is tested
 @Before
 public void setup()
 {
