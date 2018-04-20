@@ -1,11 +1,11 @@
 /**
-* ******************************************************************************************************************* 
+* ************************************************************************************************************************ 
 *	Program name        : 	Single Print method
 *	Program Description :	Let's say you have an integer array and a string array. You have to write a single method
-*							printarray that can print all the elements of both arrays. The method should be able to 
-*							accept both integer and string arrays.
-*   Date				:	19-April-2018
-*  ****************************************************************************************************************** 
+*				printarray that can print all the elements of both arrays. The method should be able to 
+*				accept both integer and string arrays.
+*   	Date	            :	19-April-2018
+*  *********************************************************************************************************************** 
 *
 */
 package com.training.Apr19;
