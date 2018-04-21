@@ -2,19 +2,15 @@
  * 
  */
 package com.training.bank;
-
 /**
  * @author trainee
  *
  */
 public class Customer {
+/**
+ * @param args
+ */
+public static void main(String[] args){
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+}
 }
