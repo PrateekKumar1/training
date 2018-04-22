@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  *Class 'Address' contains scanner,logger classes.
  *Contains flatno number, address, city, province and pincode.
  */
-class Address {
+class Address extends Contact{
 final static Scanner read=new Scanner(System.in);
 final static Logger lps=Logger.getLogger(Address.class.getName());
 private String Flatno;
@@ -29,7 +29,7 @@ private int pincodes;
  */
 public Address(final String Flatno,final String address,final String city,final String Province_State,int pincodes)
 {
-super();
+//super(pincodes, pincodes, Province_State);
 this.Flatno=Flatno;
 this.address=address;
 this.city=city;
@@ -102,15 +102,22 @@ return pincodes;
  * @param args
  */
 public static void main(final String[] args) throws IOException {
-final List<Object> adr = new ArrayList<Object>();
 lps.info("Enter flat number\t");
 final int ph1=read.nextInt();
 lps.info("Enter address\t");
 final String adrs=read.next();
 lps.info("Enter city\t");
 final String ctys=read.next();
-lps.info("Enter email\t");
-final String eml1=read.next();
+lps.info("Enter province/state\t");
+final String prv=read.next();
+lps.info("Enter pincode\t");
+final int pin=read.nextInt();
+final List<Object> adr = new ArrayList<Object>();
+adr.add(ph1);
+adr.add(adrs);
+adr.add(ctys);
+adr.add(prv);
+adr.add(pin);
 	}
 
 }
