@@ -6,18 +6,18 @@ package com.training.bank;
  * @author PRATEEK KR
  *
  */
-class Account extends Bank {
+abstract class Account {
 Double balance=0.0;
+static long numb=1;
 Long accno;
 /**
  * @param balance
  * @param accno
  */
-public Account(Double balance,Long accno)
+public Account(Double balance)
 {
 this.balance=balance;
-this.accno=accno;
-accno=accno++;
+accno=numb++;
 }
 /**
  * @param balance
@@ -34,24 +34,7 @@ public Double getbalance()
 return balance;
 }
 /**
- * @param accno
- */
-public void setaccno(Long accno)
-{
-this .accno=accno;
-}
-/**
- * @return
- */
-public Long getaccno()
-{
-return accno;
-}
-/**
 * @param args
 */
-public static void main(String[] args) {
-
-}
 
 }

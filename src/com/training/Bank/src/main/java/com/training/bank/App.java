@@ -1,13 +1,8 @@
 package com.training.bank;
-
-/**
- * Hello world!
- *
- */
-public class App 
+public class App extends Bank 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println(name);
     }
 }

@@ -20,13 +20,12 @@ private String lname;
 
 /**
  * @param balance
- * @param accno
  * @param fname
  * @param lname
  */
-public Customer(Double balance,Long accno,String fname,String lname)
+public Customer(Double balance,String fname,String lname)
 {
-super(balance,accno);
+super(balance);
 this.fname=fname;
 this.lname=lname;
 }
@@ -43,20 +42,6 @@ this.balance=balance;
 public Double getbalance()
 {
 return balance;
-}
-/* (non-Javadoc)
- * @see com.training.bank.Account#setaccno(java.lang.Long)
- */
-public void setaccno(Long accno)
-{
-this.accno=accno;
-}
-/**
- * @return
- */
-public Long getaacno()
-{
-return accno;
 }
 /**
  * @param fname
