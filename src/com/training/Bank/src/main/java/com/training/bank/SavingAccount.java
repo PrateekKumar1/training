@@ -10,12 +10,13 @@ import java.util.logging.Logger;
  *
  */
 public class SavingAccount extends Account {
+Customer custm;
 /**
  * @param balance
- * @param accno
+ * @param custm
  */
-public SavingAccount(Double balance) {
-super(balance);
+public SavingAccount(Double balance, Customer custm) {
+super(balance, custm);
 }
 final static Scanner read=new Scanner(System.in);
 final static Logger lps=Logger.getLogger(SavingAccount.class.getName());

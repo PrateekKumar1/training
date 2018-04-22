@@ -7,16 +7,18 @@ package com.training.bank;
  *
  */
 abstract class Account {
+Customer custm;
 Double balance=0.0;
 static long numb=1;
-Long accno;
+long accno;
 /**
  * @param balance
- * @param accno
+ * @param custm
  */
-public Account(Double balance)
+public Account(Double balance,Customer custm)
 {
 this.balance=balance;
+this.custm=custm;
 accno=numb++;
 }
 /**
@@ -34,7 +36,11 @@ public Double getbalance()
 return balance;
 }
 /**
-* @param args
-*/
+ * @return
+ */
+public long getAccountNumber() {
+	return accno;
+}
+
 
 }
