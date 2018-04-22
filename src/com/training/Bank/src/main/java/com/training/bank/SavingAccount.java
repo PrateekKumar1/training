@@ -5,9 +5,8 @@ package com.training.bank;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
-
 /**
- * @author trainee
+ * @author PRATEEK KR
  *
  */
 public class SavingAccount extends Account {
