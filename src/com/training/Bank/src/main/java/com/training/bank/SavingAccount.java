@@ -18,7 +18,7 @@ public SavingAccount(Double balance) {
 super(balance);
 }
 final static Scanner read=new Scanner(System.in);
-final static Logger lps=Logger.getLogger(Address.class.getName());
+final static Logger lps=Logger.getLogger(SavingAccount.class.getName());
 /* (non-Javadoc)
  * @see com.training.bank.Account#setbalance(java.lang.Double)
  */
@@ -33,21 +33,6 @@ public Double getbalance()
 {
 return balance;
 }
-/* (non-Javadoc)
- * @see com.training.bank.Account#setaccno(java.lang.Long)
- */
-public void setaccno(Long accno)
-{
-this.accno=accno;
-}
-/* (non-Javadoc)
- * @see com.training.bank.Account#getaccno()
- */
-public Long getaccno()
-{
-return accno;
-}
-
 /**
  * @param witdrw
  */
@@ -61,12 +46,4 @@ public void deposit(double depo)
 balance=balance+depo;
 lps.info("Remaining balanc=INR"+balance);
 }
-
-/**
-* @param args
-*/
-public static void main(String[] args) {
-
-}
-
 }

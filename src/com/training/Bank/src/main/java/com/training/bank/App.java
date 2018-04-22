@@ -1,8 +1,8 @@
 package com.training.bank;
-public class App extends Bank 
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println(name);
+        
     }
 }
