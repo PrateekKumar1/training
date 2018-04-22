@@ -12,19 +12,51 @@ import java.util.logging.Logger;
  * @author trainee
  *
  */
-class Customer extends Contact{
+class Customer extends Account{
 final static Scanner read=new Scanner(System.in);
 final static Logger lps=Logger.getLogger(Address.class.getName());
 private String fname;
 private String lname;
+
 /**
+ * @param balance
+ * @param accno
  * @param fname
  * @param lname
  */
-public Customer(String fname,String lname)
+public Customer(Double balance,Long accno,String fname,String lname)
 {
+super(balance,accno);
 this.fname=fname;
 this.lname=lname;
+}
+/* (non-Javadoc)
+ * @see com.training.bank.Account#setbalance(java.lang.Double)
+ */
+public void setbalance(Double balance)
+{
+this.balance=balance;
+}
+/* (non-Javadoc)
+ * @see com.training.bank.Account#getbalance()
+ */
+public Double getbalance()
+{
+return balance;
+}
+/* (non-Javadoc)
+ * @see com.training.bank.Account#setaccno(java.lang.Long)
+ */
+public void setaccno(Long accno)
+{
+this.accno=accno;
+}
+/**
+ * @return
+ */
+public Long getaacno()
+{
+return accno;
 }
 /**
  * @param fname
@@ -58,12 +90,12 @@ return lname;
 * @param args
 */
 public static void main(String[] args) {
-
-}
 List<String> names=new ArrayList<String>();
 lps.info("Enter address\t");
 final String adrs=read.next();
 lps.info("Enter city\t");
 final String ctys=read.next();
+
+}
 
 }
