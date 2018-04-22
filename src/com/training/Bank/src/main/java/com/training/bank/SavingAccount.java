@@ -47,4 +47,9 @@ public void deposit(double depo)
 balance=balance+depo;
 lps.info("Remaining balanc=INR"+balance);
 }
+public static void main(String[] args) {
+lps.info("Enter balance amount");
+final int balance=read.nextInt();
+
+}
 }
