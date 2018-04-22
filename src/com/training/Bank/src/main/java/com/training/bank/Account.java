@@ -8,6 +8,7 @@ package com.training.bank;
  */
 abstract class Account {
 Customer custm;
+SavingAccount sacc;
 Double balance=0.0;
 static long numb=1;
 long accno;
