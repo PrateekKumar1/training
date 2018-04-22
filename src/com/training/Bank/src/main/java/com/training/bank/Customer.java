@@ -3,6 +3,7 @@
  */
 package com.training.bank;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -182,7 +183,7 @@ return pincodes;
 /**
 * @param args
 */
-public static void main(String[] args) {
+public static void main(String[] args) throws IOException {
 lps.info("Enter first name");
 final String fname=read.next();
 lps.info("Enter last name");

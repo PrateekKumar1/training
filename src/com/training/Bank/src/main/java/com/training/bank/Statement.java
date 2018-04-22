@@ -3,16 +3,17 @@
  */
 package com.training.bank;
 /**
- * @author trainee
+ * @author PRATEEK KR
  *
  */
 public class Statement {
+Account abs;
 /**
-* @param args
+ * @param abs
  */
-	public static void main(String[] args) {
-		
+Statement(Account abs){
+this.abs=abs;	
+}
 
-	}
 
 }

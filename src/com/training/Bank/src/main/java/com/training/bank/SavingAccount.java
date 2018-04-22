@@ -10,7 +10,7 @@ import java.util.logging.Logger;
  *
  */
 public class SavingAccount extends Account {
-Customer custm;
+//Customer custm;
 /**
  * @param balance
  * @param custm
@@ -50,6 +50,7 @@ lps.info("Remaining balanc=INR"+balance);
 public static void main(String[] args) {
 lps.info("Enter balance amount");
 final int balance=read.nextInt();
+//int ch;
 
 }
 }
