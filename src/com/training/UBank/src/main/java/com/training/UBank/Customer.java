@@ -13,64 +13,135 @@ import java.util.logging.Logger;
  *
  */
 class Customer {
-static Contact cntc;
-final static Scanner read=new Scanner(System.in);
-final static Logger lps=Logger.getLogger(Customer.class.getName());
-private String fname;
-private String lname;
+String fname;
+String lname;
+long mobile;
+String email;
+String flatno;
+String address;
+String city;
+int zip;
+
 /**
  * @param fname
  * @param lname
+ * @param mobile
+ * @param email
+ * @param flatno
+ * @param address
+ * @param city
+ * @param zip
  */
-public Customer(final Double balance,final String fname,final String lname,final Contact cntc)
-{
-
-this.fname=fname;
-this.lname=lname;
-this.cntc=cntc;
+public Customer(final String fname, final String lname,final long mobile,final String email, final String flatno,final String address,final String city,final int zip ) {
+this.fname = fname;
+this.lname = lname;
+this.mobile=mobile;
+this.email = email;
+this.flatno=flatno;
+this.address = address;
+this.city=city;
+this.zip=zip;
 }
-
 /**
- * @param fname
- */
-public void setfname(final String fname)
-{
-this.fname=fname;
+* @param fname
+*
+*/
+public void setfname(final String fname) {
+this.fname = fname;
 }
 /**
- * @return
- */
-public String getfname()
-{
+* @return fname
+*/
+public String getfname() {
 return fname;
 }
 /**
- * @param lname
- */
-public void setlname(final String lname)
-{
-this.lname=lname;
+* @param lname
+*    
+*/
+public void setLname(final String lname) {
+this.lname = lname;
 }
 /**
- * @return
+ * @return 
  */
-public String getlname()
-{
+public String getlname() {
 return lname;
 }
 /**
-* @param args
-*/
-public static void main(final String[] args) throws IOException {
-//lps.info("Enter first name");
-final String fname="Andorra";
-//lps.info("Enter last name");
-final String lname="Aisle";
-final List<Object> cust = new ArrayList<Object>();
-cust.add(fname);
-cust.add(lname);
-//cust.add(cntc);
-lps.info(fname+"\t"+lname);
-read.close();
+ * @return the mobile
+ */
+public long getMobile() {
+return mobile;
 }
+/**
+ * @param mobile the mobile to set
+ */
+public void setMobile(final long mobile) {
+this.mobile = mobile;
+}
+/**
+ * @return the email
+ */
+public String getEmail() {
+return email;
+}
+/**
+ * @param email
+ *            the email to set
+ */
+public void setEmail(String email) {
+	this.email = email;
+}
+/**
+ * @return the flatno
+ */
+public String getFlatno() {
+return flatno;
+}
+/**
+ * @param flatno the flatno to set
+ */
+public void setFlatno(final String flatno) {
+this.flatno = flatno;
+}
+/**
+ * @return the address
+ */
+public String getAddress() {
+return address;
+}
+/**
+ * @param address
+ *            the address to set
+ */
+public void setAddress(String address) {
+this.address = address;
+}
+
+/**
+ * @return the city
+ */
+public String getCity() {
+	return city;
+}
+/**
+ * @param city the city to set
+ */
+public void setCity(final String city) {
+this.city = city;
+}
+/**
+ * @return the zip
+ */
+public int getZip() {
+return zip;
+}
+/**
+ * @param zip the zip to set
+ */
+public void setZip(final int zip) {
+this.zip = zip;
+}
+
 }

@@ -8,6 +8,7 @@ package com.training.UBank;
  */
 public class Statement {
 static Account abs;
+
 /**
  * @param abs
  */

@@ -10,32 +10,35 @@ import java.util.logging.Logger;
  *
  */
 public class SavingAccount extends Account {
+Customer cust;
+final double interestRate= 8.47; 
 /**
-	 * @param custm
-	 */
-public SavingAccount(Customer custm) {
-super(custm);
+* @param balance
+* @param cust
+*/
+public SavingAccount(final double balance, final Customer cust) {
+super(balance, cust);
+this.cust=cust;
 }
-final static Scanner read=new Scanner(System.in);
-final static Logger lps=Logger.getLogger(SavingAccount.class.getName());
-static Double balance;
-static Double rate;
-static int time;
-static Double interest;
-static Double totamt;
 
-
-/**
- * @param args
- */
-public static void main(final String[] args) {
-lps.info("Enter balance amount");
-balance=read.nextDouble();
-rate=8.51;
-lps.info("Enter time");
-time=read.nextInt();
-interest=balance*rate*time/100;
-totamt=balance+interest;
-System.out.println("INR"+totamt);
+public void Deposit(int amt) {
+balance = balance + amt;
 }
+
+public void Withdraw(int amt) {
+if (balance - amt > 0) {
+balance = balance - amt;
+}
+else {
+System.out.println("Not enough balance to withdraw " + amt);
+}
+}
+public void addInterest()
+{
+balance = interestRate * balance+balance ;
+System.out.println("Salary After adding interest rate is :"+balance);
+}
+public void Disp() {
+System.out.println(" \n Account no:" + accnum + "\t|\t Balance:" + balance+"\t|\t Name:"+customer.getfname()+" \t|\t Surname:"+customer.getlname());
+	}
 }
