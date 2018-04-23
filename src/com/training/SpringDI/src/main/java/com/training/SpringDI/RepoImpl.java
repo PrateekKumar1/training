@@ -9,7 +9,7 @@ import java.util.List;
  * @author PRATEEK KR
  *
  */
-public class ServiceImpl implements Service {
+public class RepoImpl implements Repo {
 public void getAll(List<Customers> lcust) {
 }
 }

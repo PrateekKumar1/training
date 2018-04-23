@@ -13,6 +13,6 @@ public interface Service {
 /**
  * @param list
  */
-public void getAll(List<Customers> list);
+public void getAll(List<Customers> lcust);
 
 }

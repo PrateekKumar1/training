@@ -13,6 +13,12 @@ class Customers {
 static Scanner read=new Scanner(System.in);
 private String fname;
 private String lname;
+/**
+ * 
+ */
+public Customers() {
+	// TODO Auto-generated constructor stub
+}
 Customers(String fname,String lname)
 {
 this.fname=fname;
