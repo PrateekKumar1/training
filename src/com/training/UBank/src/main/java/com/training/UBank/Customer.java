@@ -22,7 +22,7 @@ private String lname;
  * @param fname
  * @param lname
  */
-public Customer(final Double balance,final String fname,final String lname,Contact cntc)
+public Customer(final Double balance,final String fname,final String lname,final Contact cntc)
 {
 
 this.fname=fname;
@@ -62,15 +62,15 @@ return lname;
 * @param args
 */
 public static void main(final String[] args) throws IOException {
-lps.info("Enter first name");
-final String fname=read.next();
-lps.info("Enter last name");
-final String lname=read.next();
+//lps.info("Enter first name");
+final String fname="Andorra";
+//lps.info("Enter last name");
+final String lname="Aisle";
 final List<Object> cust = new ArrayList<Object>();
 cust.add(fname);
 cust.add(lname);
-cust.add(cntc);
-lps.info(fname+"\t"+lname+"\t"+cntc);
+//cust.add(cntc);
+lps.info(fname+"\t"+lname);
 read.close();
 }
 }

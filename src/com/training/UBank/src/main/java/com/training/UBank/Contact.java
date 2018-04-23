@@ -68,17 +68,17 @@ return email;
  * @throws IOException
  */
 public static void main(final String[] args) throws IOException {
-lps.info("Enter phone number\t");
-final int ph1=read.nextInt();
-lps.info("Enter mobile number\t");
-final int mob1=read.nextInt();
-lps.info("Enter email\t");
-final String eml1=read.next();
-lps.info("Enter flat number\t");
+//lps.info("Enter phone number\t");
+final int ph1=132;
+//lps.info("Enter mobile number\t");
+final int mob1=132789465;
+//lps.info("Enter email\t");
+final String eml1="abc13@xmail.com";
 final List<Object> cont = new ArrayList<Object>();
 cont.add(eml1);
 cont.add(ph1);
 cont.add(mob1);
+System.out.println(cont);
 read.close();
 }
 }

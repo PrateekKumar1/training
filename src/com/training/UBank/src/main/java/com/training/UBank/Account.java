@@ -38,6 +38,7 @@ return accno;
  */
 public static void main(final String[] args)
 {
+
 System.out.println(custm);
 int ch;
 System.out.print("Select Account type:\n1>Savings account\n2>Checking Account\n3>Flexible saving account\t");

@@ -5,14 +5,14 @@ package com.training.UBank;
  */
 public class Bank {
 static Account act;
+Customer cust;
 /**
  * @param args
  */
-public static void main(String[] args) {
-String name="Bank of India";
+public static void main(final String[] args) {
+final String name="Bank of India";
 System.out.println("Welcome to "+name);
-System.out.println(act
-		);		
+	
 
 }
 }

@@ -63,22 +63,24 @@ return pincodes;
 * @param args
 */
 public static void main(final String[] args) {
-lps.info("Enter flat no.\t");
-final String fltn=read.next();
-lps.info("Enter address\t");
-final String addr=read.next();
-lps.info("Enter city\t");
-final String city=read.next();
-lps.info("Enter province\t");
-final String prov=read.next();
-lps.info("Enter pincode\t");
-final int pinc=read.nextInt();
+//lps.info("Enter flat no.\t");
+final String fltn="Ba123";
+//lps.info("Enter address\t");
+final String addr="Victors";
+//lps.info("Enter city\t");
+final String city="Mumbai";
+//lps.info("Enter province\t");
+final String prov="Maharashtra";
+//lps.info("Enter pincode\t");
+final int pinc=4056789;
 final List<Object> adrs = new ArrayList<Object>();
 adrs.add(fltn);
 adrs.add(addr);
 adrs.add(city);
 adrs.add(prov);
 adrs.add(pinc);
+System.out.println(adrs);
+read.close();
 }
 
 }
