@@ -2,19 +2,18 @@
  * 
  */
 package com.training.bank;
-
 /**
- * @author trainee
+ * @author PRATEEK KR
  *
  */
 public class Statement {
+Account abs;
+/**
+ * @param abs
+ */
+Statement(Account abs){
+this.abs=abs;	
+}
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 
 }
