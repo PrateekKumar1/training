@@ -3,41 +3,36 @@
  */
 package com.training.UBank;
 
-import java.util.Scanner;
-import java.util.logging.Logger;
-
 /**
- * @author trainee
+ * @author PRATEEK KR	
  *
  */
 public class FlexibleSavingAccount extends Account{
-final static Scanner read=new Scanner(System.in);
-final static Logger lps=Logger.getLogger(CheckingAccount.class.getName());
-static Double balance;
-static Double rate;
-static int time;
-static Double interest;
-static Double totamt;
-/**
-* @param custm
-*/
-public FlexibleSavingAccount(Customer custm) {
-super(custm);
-}
+Customer cust;
+final double rate= 8.81;
 
 /**
-* @param args
+* @param cust
 */
-public static void main(final String[] args) {
-lps.info("Enter balance amount");
-balance=read.nextDouble();
-rate=8.75;
-lps.info("Enter time");
-time=read.nextInt();
-interest=balance*rate*time/100;
-totamt=balance+interest;
-System.out.println("INR"+totamt);
-read.close();
+public FlexibleSavingAccount(final double balance,final Customer cust) {
+super(balance,cust);
+this.cust=cust;
 }
 
+public void Withdraw(int amount)
+{
+ if (amount < 0)
+ {
+       
+  }
+  balance = balance - amount;
+  }
+public void addInterest()
+{
+balance = balance+(rate * balance)/100 ;
+System.out.println("Salary After adding interest rate is :"+balance);
+}
+public void Display() {
+System.out.println(" \n Account no:" + accnum + "\t|\t Balance:" + balance+"\t|\t Name:"+customer.getfname()+" \t|\t Surname:"+customer.getlname());
+}
 }

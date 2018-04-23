@@ -9,10 +9,8 @@ Customer cust;
 /**
  * @param args
  */
-public static void main(final String[] args) {
-final String name="Bank of India";
-System.out.println("Welcome to "+name);
-	
-
+public void bankName() {
+	final String name="Bank of India";
+	System.out.println("Welcome to "+name);
 }
 }
