@@ -15,8 +15,8 @@ public class SavingAccount extends Account {
  * @param balance
  * @param custm
  */
-public SavingAccount(Double balance, Customer custm) {
-super(balance, custm);
+public SavingAccount(Double balance, Customer custm,Double prin,Double rate, Double time) {
+super(balance, custm, prin, rate, time);
 }
 final static Scanner read=new Scanner(System.in);
 final static Logger lps=Logger.getLogger(SavingAccount.class.getName());
