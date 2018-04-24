@@ -18,8 +18,8 @@ super(balance, cust);
 this.cust=cust;
 }
 
-public void Deposit(Double amt) {
-balance = balance + amt;
+public void Deposit(int i) {
+balance = balance + i;
 }
 
 public void Withdraw(Double amt) {
