@@ -16,6 +16,6 @@ public static void main( final String[] args )
 {
 final ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 final Customers cust1=ctx.getBean(Customers.class);
-System.out.println( "Hello World!" );
+System.out.println( "Hello World!\nWelcome to Spring" );
     }
 }

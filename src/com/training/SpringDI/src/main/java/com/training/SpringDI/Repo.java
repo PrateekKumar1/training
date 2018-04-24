@@ -2,9 +2,7 @@
  * 
  */
 package com.training.SpringDI;
-
 import java.util.List;
-
 /**
  * @author PRATEEK KR
  *
