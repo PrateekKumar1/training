@@ -25,7 +25,6 @@ private String city;
 private String Province_State;
 private int pincodes;
 /**
-* @param balance
 * @param fname
 * @param lname
 * @param phone
@@ -37,7 +36,7 @@ private int pincodes;
 * @param Province_State
 * @param pincodes
 */
-public Customers(Double balance,String fname,String lname,int phone,int mobile,String email,final String Flatno,final String address,final String city,final String Province_State,int pincodes)
+public Customers(String fname,String lname,int phone,int mobile,String email,final String Flatno,final String address,final String city,final String Province_State,int pincodes)
 {
 this.fname=fname;
 this.lname=lname;
