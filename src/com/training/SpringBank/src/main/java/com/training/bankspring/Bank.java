@@ -7,7 +7,7 @@ package com.training.bankspring;
  * @author PRATEEK KR
  *
  */
-class Bank {
+public class Bank {
 //Giving bank name;
 static String name ="--------B4U--------";
 public void bankName() {

@@ -7,23 +7,23 @@ package com.training.bankspring;
  * @author PRATEEK KR
  *
  */
-public class SavingAccount {
+public class FlexibleSavingAccount {
 double balance;
 int accnumb;
 final double interestRate = 8.67;
 static int id = 0;
 Customers cust;
-public SavingAccount(final double balance, final int accnumb, final Customers cust) {
+public FlexibleSavingAccount(final double balance, final int accnumb, final Customers cust) {
 super();
 this.balance = balance;
 this.accnumb = accnumb;
 this.cust = cust;
 }
-public SavingAccount(final double balance, final int accnumb) {
+public FlexibleSavingAccount(final double balance, final int accnumb) {
 this.balance = balance;
 this.accnumb = accnumb;
 }
-public SavingAccount() {
+public FlexibleSavingAccount() {
 }
 /**
 * @return the balance
@@ -74,6 +74,4 @@ return interestRate;
 public String toString() {
 return "SavingAccount balance=" + balance + ", accountNumber=" + accnumb + ", interestRate="+ interestRate + ", customer=" + cust + "";
 }
-
-
 }

@@ -12,6 +12,7 @@ import com.training.bankspring.Customers;
  *
  */
 public interface CustomerRepo {
-	List<Customers> findAll();
+public List<Customers> addCustomer(Customers custm);
+
 
 }

@@ -17,7 +17,7 @@ import org.junit.Test;
  *
  */
 public class BankTest {
-Customers cust=new Customers("Prateek", "Kumar",798132456,"abc.12@xmail.com","C-12","Vasant Kunj","Delhi",501234);
+Customers cust=new Customers("Prateek", "Kumar",123,798132456,"abc.12@xmail.com","C-12","Vasant Kunj","Delhi",501234);
 SavingAccount sva=new SavingAccount(1300,cust);
 @Test
 public void nullfirstname() {
@@ -37,12 +37,12 @@ assertNotEquals("Null not allowed",cust.getEmail());
 @Test
 public void nulladress() {
 String str=null;
-assertNotEquals("Null not allowed",cust.getAddress());
+assertNotEquals("Null not allowed",cust.getaddress());
 }
 @Test
 public void nullpincodes() {
 int pin;
-assertNotEquals("Null not allowed",cust.getZip());
+assertNotEquals("Null not allowed",cust.getpincode());
 }
 @Test
 public void testwithdrawpass() {

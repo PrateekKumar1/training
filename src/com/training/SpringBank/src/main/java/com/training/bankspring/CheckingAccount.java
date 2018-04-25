@@ -27,6 +27,9 @@ this.balance = balance;
 this.accnumb = accnumb;
 }
 /**
+ * 
+ */
+/**
 * @return 
  */
 public Customers getcustomer() {
