@@ -175,5 +175,13 @@ this.pincodes=pincodes;
 public int getpincode(){  
 return pincodes;  
 }  	
+/* (non-Javadoc)
+ * @see java.lang.Object#toString()
+ */
+@Override
+public String toString() {
+return "Customer fname=" + fname + ", lname=" + lname + "phone "+phone+",mobile"+mobile+",email"+email+",Flat no."+Flatno+", address=" + address + ",city=" +city+",province"+Province_State+ ",zip code=" +pincodes + "";
+}
+
 
 }
