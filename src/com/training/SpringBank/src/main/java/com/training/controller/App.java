@@ -20,7 +20,7 @@ public class App
 {
 public static void main( final String[] args )
 {
-final ApplicationContext ctx = new ClassPathXmlApplicationContext("CustomerBeans.xml");
+final ApplicationContext ctx = new ClassPathXmlApplicationContext("bean.xml");
 final Customers custm1 = ctx.getBean(Customers.class);
 final List<Customers> lSavingAccount = new ArrayList<Customers>();
 lSavingAccount.add(custm1);

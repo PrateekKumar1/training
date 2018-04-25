@@ -19,7 +19,7 @@ final CheckingAccount savingAccount = new CheckingAccount(null, amount, amount, 
 double balance = savingAccount.getBalance();
 balance = balance - amount;
 final Date date = new Date();
-List list = new ArrayList();
+final List list = new ArrayList();
 list.add(date);
 list.add("Amount withdraw from current account  is" + amount);
 return list;
