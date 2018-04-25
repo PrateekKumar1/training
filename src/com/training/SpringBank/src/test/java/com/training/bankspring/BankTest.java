@@ -17,7 +17,7 @@ import org.junit.Test;
  *
  */
 public class BankTest {
-Customer cust=new Customer("Prateek", "Kumar",798132456,"abc.12@xmail.com","C-12","Vasant Kunj","Delhi",501234);
+Customers cust=new Customers("Prateek", "Kumar",798132456,"abc.12@xmail.com","C-12","Vasant Kunj","Delhi",501234);
 SavingAccount sva=new SavingAccount(1300,cust);
 @Test
 public void nullfirstname() {

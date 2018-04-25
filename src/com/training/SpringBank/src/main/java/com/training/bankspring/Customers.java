@@ -36,7 +36,7 @@ private int pincodes;
 * @param Province_State
 * @param pincodes
 */
-public Customers(String fname,String lname,int phone,int mobile,String email,final String Flatno,final String address,final String city,final String Province_State,int pincodes)
+public Customers(final String fname,final String lname,final int phone,final int mobile,final String email,final String Flatno,final String address,final String city,final String Province_State,int pincodes)
 {
 this.fname=fname;
 this.lname=lname;
@@ -52,7 +52,7 @@ this.pincodes=pincodes;
 /**
  * @param fname
  */
-public void setfname(String fname)
+public void setfname(final String fname)
 {
 this.fname=fname;
 }
