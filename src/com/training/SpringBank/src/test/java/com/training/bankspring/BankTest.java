@@ -12,7 +12,7 @@ import java.io.IOException;
 import org.junit.Before;
 import org.junit.Test;
 /**
- * @author trainee
+ * @author PRATEEK KR
  *
  */
 public class BankTest {
@@ -21,7 +21,7 @@ Customers cust = null; // Calculator is tested
 @Before
 public void setup()
 {
-test=new Customers("Prateek", "Kumar",123,798132456,"abc.12@xmail.com","C-12","Vasant Kunj","Delhi",501234);
+cust=new Customers("Prateek", "Kumar",123,798132456,"abc.12@xmail.com","C-12","Vasant Kunj","Delhi","Delhi", 501234);
 } 
 
 //SavingAccount sva=new SavingAccount(1300,cust);
