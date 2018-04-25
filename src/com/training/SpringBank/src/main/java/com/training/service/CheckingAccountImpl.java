@@ -15,7 +15,7 @@ import com.training.repo.CustomerRepoImpl;
 public class CheckingAccountImpl implements Account {
 
 public List Withdraw(double amount) {
-final CheckingAccount savingAccount = new CheckingAccount();
+final CheckingAccount savingAccount = new CheckingAccount(null, amount, amount, 0);
 double balance = savingAccount.getBalance();
 balance = balance - amount;
 final Date date = new Date();
@@ -26,7 +26,7 @@ return list;
 }
 
 public List Deposit(double amount) {
-final CheckingAccount savingAccount = new CheckingAccount();
+final CheckingAccount savingAccount = new CheckingAccount(null, amount, amount, 0);
 double balance = savingAccount.getBalance();
 balance = balance + amount;
 final Date date = new Date();

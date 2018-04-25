@@ -9,17 +9,17 @@ package com.training.bankspring;
  */
 public class SavingAccount {
 double balance;
-int accnumb;
+String accnumb;
 final double interestRate = 8.67;
 static int id = 0;
 Customers cust;
-public SavingAccount(final double balance, final int accnumb, final Customers cust) {
+public SavingAccount(final double balance, final String accnumb, final Customers cust) {
 super();
 this.balance = balance;
 this.accnumb = accnumb;
 this.cust = cust;
 }
-public SavingAccount(final double balance, final int accnumb) {
+public SavingAccount(final double balance, final String accnumb) {
 this.balance = balance;
 this.accnumb = accnumb;
 }
@@ -40,13 +40,13 @@ this.balance = balance;
 /**
 * @return
 */
-public int getAccountNumber() {
+public String getAccountNumber() {
 return accnumb;
 }
 /**
 * @param
 */
-public void setAccountNumber(final int accnumb) {
+public void setAccountNumber(final String accnumb) {
 this.accnumb = accnumb;
 }
 /**

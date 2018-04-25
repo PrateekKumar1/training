@@ -14,6 +14,6 @@ import com.training.bankspring.SavingAccount;
 public class SavingAccountDaoImpl {
 Map<String, SavingAccount> smap = new HashMap<String, SavingAccount>();
 public void AddSavingAccount(SavingAccount sa) {
-smap.put(sa.getaccnumb(),sa);
+smap.put(sa.getAccountNumber(),sa);
 	}
 }
