@@ -28,11 +28,6 @@ public class CheckingAccount implements Account {
 		this.cust = cust;
 	}
 
-	public CheckingAccount(final double balance, final String accnumb) {
-		this.balance = balance;
-		this.accnumb = accnumb;
-	}
-
 	public CheckingAccount() {
 	}
 
@@ -110,7 +105,7 @@ public class CheckingAccount implements Account {
 		balance = balance - amount;
 		final List list = new ArrayList();
 		list.add(amount);
-		lps.info("Remaining in " + cust.getFlatno() + cust.getLname() + "checking account after withdrwal is INR"
+		lps.info("Remaining in checking account after withdrwal is INR"
 				+ balance);
 		return list;
 	}
@@ -126,7 +121,7 @@ public class CheckingAccount implements Account {
 		balance = balance + amount;
 		final List list = new ArrayList();
 		list.add(amount);
-		lps.info("Amount in " + cust.getFlatno() + cust.getLname() + "checking account after deposit is INR" + balance);
+		lps.info("Amount in checking account after deposit is INR" + balance);
 		return list;
 	}
 }

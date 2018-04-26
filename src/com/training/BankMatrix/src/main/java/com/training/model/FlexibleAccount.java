@@ -28,11 +28,6 @@ public class FlexibleAccount implements Account {
 		this.cust = cust;
 	}
 
-	public FlexibleAccount(final double balance, final String accnumb) {
-		this.balance = balance;
-		this.accnumb = accnumb;
-	}
-
 	public FlexibleAccount() {
 	}
 
@@ -110,8 +105,7 @@ public class FlexibleAccount implements Account {
 		balance = balance - amount;
 		final List list = new ArrayList();
 		list.add(amount);
-		lps.info("Remaining balance in " + cust.getFlatno() + cust.getLname()
-				+ "flexible account after withdrawl is INR" + amount);
+		lps.info("Remaining balance in flexible account after withdrawl is INR" + amount);
 		return list;
 	}
 
@@ -126,7 +120,7 @@ public class FlexibleAccount implements Account {
 		balance = balance + amount;
 		final List list = new ArrayList();
 		list.add(amount);
-		lps.info("Amount in " + cust.getFlatno() + cust.getLname() + "flexible account after deposit is INR" + amount);
+		lps.info("Amount in flexible account after deposit is INR" + amount);
 		return list;
 	}
 }

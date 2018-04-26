@@ -16,24 +16,29 @@ import com.training.model.SavingsAccount;
 public class App extends Bank {
 	final static Scanner read = new Scanner(System.in);
 	final static Logger lps = Logger.getLogger(App.class.getName());
-	Bank bnks;
-	Customers cust;
+	
 
 	public static void main(String[] args) {
+		Bank bnks;
+		Customers cust;
 		FlexibleAccount fa = new FlexibleAccount();
 		SavingsAccount sva = new SavingsAccount();
 		CheckingAccount chacc = new CheckingAccount();
 		int choice;
 		int choice2;
 		displayname();
+		/*lps.info("\nCustomer Details\n");
+		ApplicationContext actx = new ClassPathXmlApplicationContext("applicationContext.xml");
+		SavingsAccount e=(SavingsAccount)actx.getBean("e");
+		lps.info("\n"+e.getAccnumb()+"|"+e.getBalance()+"|"+e.getCust());*/
 		lps.info("Enter the type of account");
-		lps.info("1>Savings Account\n2>Flexible Account\n3>Checking Account\t");
+		lps.info("\n1>Savings Account\n2>Flexible Account\n3>Checking Account\t");
 		choice = read.nextInt();
 		switch (choice) {
 		case 1:
 			lps.info("Savings Account");
 			lps.info("Enter the operation you want to perform");
-			lps.info("1>Withdrwal\n2>Deposit\t");
+			lps.info("\n1>Withdrwal\n2>Deposit\t");
 			choice2 = read.nextInt();
 			switch (choice2) {
 			case 1:
@@ -52,7 +57,7 @@ public class App extends Bank {
 		case 2:
 			lps.info("Flexible Account");
 			lps.info("Enter the operation you want to perform");
-			lps.info("1>Withdrwal\n2>Deposit\t");
+			lps.info("\n1>Withdrwal\n2>Deposit\t");
 			choice2 = read.nextInt();
 			switch (choice2) {
 			case 1:
@@ -72,7 +77,7 @@ public class App extends Bank {
 		case 3:
 			lps.info("Checking Account");
 			lps.info("Enter the operation you want to perform");
-			lps.info("1>Withdrwal\n2>Deposit\t");
+			lps.info("\n1>Withdrwal\n2>Deposit\t");
 			choice2 = read.nextInt();
 			switch (choice2) {
 			case 1:

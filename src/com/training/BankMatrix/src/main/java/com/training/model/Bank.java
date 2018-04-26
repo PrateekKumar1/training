@@ -17,6 +17,6 @@ public class Bank {
 	 */
 	public static void displayname() {
 		final String name = "Azores Bank";
-		lps.info(name);
+		lps.info("\n"+name);
 	}
 }

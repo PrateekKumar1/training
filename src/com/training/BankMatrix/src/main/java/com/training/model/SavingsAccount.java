@@ -27,12 +27,6 @@ public class SavingsAccount implements Account {
 		this.accnumb = accnumb;
 		this.cust = cust;
 	}
-
-	public SavingsAccount(final double balance, final String accnumb) {
-		this.balance = balance;
-		this.accnumb = accnumb;
-	}
-
 	public SavingsAccount() {
 	}
 
@@ -110,8 +104,7 @@ public class SavingsAccount implements Account {
 		balance = balance - amount;
 		final List list = new ArrayList();
 		list.add(amount);
-		lps.info("Remaining balance in " + cust.getFlatno() + cust.getLname() + "savings account after withdrawl is INR"
-				+ balance);
+		lps.info("Remaining balance in savings account after withdrawl is INR"+ balance);
 		return list;
 	}
 
@@ -126,7 +119,7 @@ public class SavingsAccount implements Account {
 		balance = balance + amount;
 		final List list = new ArrayList();
 		list.add(amount);
-		lps.info("Amount in " + cust.getFlatno() + cust.getLname() + "savings account after deposit is INR" + balance);
+		lps.info("Amount in savings account after deposit is INR" + balance);
 		return list;
 	}
 }
