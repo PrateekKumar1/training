@@ -14,7 +14,7 @@ final static Logger lps=Logger.getLogger(Bank.class.getName());
 /**
  * Displays name of the bank
  */
-public void displayname()
+public static void displayname()
 {
 final String name="Azores Bank";
 lps.info(name);
