@@ -91,15 +91,15 @@
 			<value>490023</value>
 		</property>
 	</bean>
-	<bean id="sav" class="com.training.model.Savings">
+	<bean id="sav" class="com.training.model.SavingsAccount">
 		<property name="balance">
 			<value>1000</value>
 		</property>
 		<property name="accnumb">
 			<value>1</value>
 		</property>
-		<property name="custm">
-			<ref bean="custm1"></ref>
+		<property name="cust">
+			<ref bean="Customers"></ref>
 		</property>
 	</bean>
 </beans>         
