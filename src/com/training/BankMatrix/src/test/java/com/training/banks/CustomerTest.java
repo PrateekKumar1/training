@@ -18,4 +18,10 @@ final Customers cust=new Customers();
 cust.setFname("");
 assertTrue(cust.getFname() == "");
 }
+@Test
+public void testinput(){
+final Customers cust=new Customers();
+cust.setMobile(132456);
+assertTrue(cust.getMobile()==1234650);
+}
 }
