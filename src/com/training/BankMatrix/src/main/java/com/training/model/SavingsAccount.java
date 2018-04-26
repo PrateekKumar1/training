@@ -3,7 +3,6 @@
  */
 package com.training.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -13,7 +12,7 @@ import com.training.view.Account;
  * @author PRATEEK KR
  *
  */
-public class SavingsAccount implements Account {
+public  class SavingsAccount implements Account {
 	final static Logger lps = Logger.getLogger(SavingsAccount.class.getName());
 	double balance = 1000;
 	String accnumb;
@@ -27,6 +26,7 @@ public class SavingsAccount implements Account {
 		this.accnumb = accnumb;
 		this.cust = cust;
 	}
+	
 	public SavingsAccount() {
 	}
 
@@ -93,33 +93,5 @@ public class SavingsAccount implements Account {
 				+ ", Customer=" + cust + "";
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.training.view.Account#Wdrawamt(double)
-	 */
-	public List Wdrawamt(double amount) {
-		final SavingsAccount savingAccount = new SavingsAccount();
-		double balance = savingAccount.getBalance();
-		balance = balance - amount;
-		final List list = new ArrayList();
-		list.add(amount);
-		lps.info("Remaining balance in savings account after withdrawl is INR"+ balance);
-		return list;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.training.view.Account#DepoAmt(double)
-	 */
-	public List DepoAmt(double amount) {
-		final SavingsAccount sva = new SavingsAccount();
-		double balance = sva.getBalance();
-		balance = balance + amount;
-		final List list = new ArrayList();
-		list.add(amount);
-		lps.info("Amount in savings account after deposit is INR" + balance);
-		return list;
-	}
+	
 }

@@ -19,7 +19,6 @@ import com.training.model.SavingsAccount;
 public class App extends Bank {
 	final static Scanner read = new Scanner(System.in);
 	final static Logger lps = Logger.getLogger(App.class.getName());
-	
 
 	public static void main(String[] args) {
 		Bank bnks;
@@ -32,8 +31,8 @@ public class App extends Bank {
 		displayname();
 		lps.info("\nCustomer Details\n");
 		ApplicationContext actx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		SavingsAccount sav=(SavingsAccount)actx.getBean("sav");
-		lps.info("\n"+sav.getAccnumb()+"|"+sav.getBalance()+"|"+sav.getCust());
+		SavingsAccount sav = (SavingsAccount) actx.getBean("sav");
+		lps.info("\n" + sav.getAccnumb() + "|" + sav.getBalance() + "|" + sav.getCust());
 		lps.info("Enter the type of account");
 		lps.info("\n1>Savings Account\n2>Flexible Account\n3>Checking Account\t");
 		choice = read.nextInt();
