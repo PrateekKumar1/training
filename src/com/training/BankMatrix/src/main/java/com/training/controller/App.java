@@ -3,6 +3,9 @@ package com.training.controller;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.training.model.Bank;
 import com.training.model.CheckingAccount;
 import com.training.model.Customers;
@@ -27,10 +30,10 @@ public class App extends Bank {
 		int choice;
 		int choice2;
 		displayname();
-		/*lps.info("\nCustomer Details\n");
+		lps.info("\nCustomer Details\n");
 		ApplicationContext actx = new ClassPathXmlApplicationContext("applicationContext.xml");
 		SavingsAccount e=(SavingsAccount)actx.getBean("e");
-		lps.info("\n"+e.getAccnumb()+"|"+e.getBalance()+"|"+e.getCust());*/
+		lps.info("\n"+e.getAccnumb()+"|"+e.getBalance()+"|"+e.getCust());
 		lps.info("Enter the type of account");
 		lps.info("\n1>Savings Account\n2>Flexible Account\n3>Checking Account\t");
 		choice = read.nextInt();
