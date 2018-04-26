@@ -3,7 +3,9 @@
  */
 package com.training.model;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import com.training.view.Account;
 
@@ -12,6 +14,7 @@ import com.training.view.Account;
  *
  */
 public class CheckingAccount implements Account {
+final static Logger lps=Logger.getLogger(CheckingAccount.class.getName());
 double balance;
 String accnumb;
 final double interest = 8.37;
@@ -82,14 +85,24 @@ return "Checking Account\n Balance=" + balance + ", accountNumber=" + accnumb + 
  * @see com.training.view.Account#Wdrawamt(double)
  */
 public List Wdrawamt(double amount) {
-	// TODO Auto-generated method stub
-	return null;
+final CheckingAccount chacc = new CheckingAccount();
+double balance = chacc.getBalance();
+balance = balance - amount;
+final List list = new ArrayList();
+list.add(amount);
+lps.info("Remaining in "+cust.getFlatno()+cust.getLname()+"checking account after withdrwal is INR" + amount);
+return list;
 }
 /* (non-Javadoc)
  * @see com.training.view.Account#DepoAmt(double)
  */
 public List DepoAmt(double amount) {
-	// TODO Auto-generated method stub
-	return null;
+final CheckingAccount chkdepo = new CheckingAccount();
+double balance = chkdepo.getBalance();
+balance = balance + amount;
+final List list = new ArrayList();
+list.add(amount);
+lps.info("Amount in "+cust.getFlatno()+cust.getLname()+"checking account after deposit is INR" + amount);
+return list;
 }
 }
