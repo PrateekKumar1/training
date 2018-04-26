@@ -91,4 +91,9 @@
 			<value>490023</value>
 		</property>
 	</bean>
+	<bean id="e" class="com.training.Savings">
+		<constructor-arg value="1000" type="double"></constructor-arg>
+		<constructor-arg value="123" type="String"></constructor-arg>
+		<constructor-arg value="custm" type="Customers"></constructor-arg>
+	</bean>
 </beans>         

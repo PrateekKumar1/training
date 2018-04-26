@@ -26,14 +26,21 @@ public class SavingsAccountTest {
 	}
 
 	 @Test 
-	 public void testwithdraw() { 
+	 public void testbalance() { 
 	 sa = new SavingsAccount(); 
 	 double  expbalance=1000; 
 	 assertTrue(sa.getBalance()==expbalance); 
+	 double exbal=2000;
+	 assertTrue(sa.getBalance()==exbal);
 	 }
 	
 	@Test
 	public void testnull() {
 		assertNotNull(sa);
 	}
+	/*
+	@Test
+	public void testwithdraw() {
+	double exbal=5000;
+	}*/
 }
