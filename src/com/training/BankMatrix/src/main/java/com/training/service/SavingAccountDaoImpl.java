@@ -5,15 +5,17 @@ package com.training.service;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.training.bankspring.SavingAccount;
+
+import com.training.model.SavingsAccount;
+
 
 /**
  * @author PRATEEK KR
  *
  */
 public class SavingAccountDaoImpl {
-Map<String, SavingAccount> smap = new HashMap<String, SavingAccount>();
-public void AddSavingAccount(SavingAccount sa) {
-smap.put(sa.getAccountNumber(),sa);
+Map<String, SavingsAccount> smap = new HashMap<String, SavingsAccount>();
+public void AddSavingAccount(SavingsAccount sa) {
+smap.put(sa.getAccnumb(),sa);
 	}
 }

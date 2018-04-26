@@ -2,7 +2,8 @@
  * 
  */
 package com.training.service;
-import com.training.bankspring.Customers;
+
+import com.training.model.Customers;
 
 /**
  * @author PRATEEK KR

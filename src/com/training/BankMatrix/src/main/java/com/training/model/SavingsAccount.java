@@ -6,7 +6,9 @@ package com.training.model;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.training.view.Account;
+import com.training.service.Account;
+
+
 
 /**
  * @author PRATEEK KR
