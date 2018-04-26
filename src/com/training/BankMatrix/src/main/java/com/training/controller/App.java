@@ -72,7 +72,6 @@ public class App extends Bank {
 				break;
 			default:
 				lps.info("Invalid operation selection!!!");
-				;
 				break;
 			}
 			break;
