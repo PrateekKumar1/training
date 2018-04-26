@@ -1,34 +1,32 @@
+/**
+ * 
+ */
+
 package com.training.banks;
+
+import com.training.model.Customers;
+
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.training.model.Customers;
+
 /**
  * @author PRATEEK KR
  *
  */
 public class CustomerTest {
-@Test
-public void testnull(){
-final Customers cust=new Customers();
-cust.setFname("");
-assertTrue(cust.getFname() == "");
-}
-@Test
-public void testinput(){
-final Customers cust=new Customers();
-cust.setMobile(132456);
-assertTrue(cust.getMobile()==1234650);
-}
-<<<<<<< HEAD
-=======
-}
+	@Test
+	public void testnull() {
+		final Customers cust = new Customers();
+		assertNotNull(cust.getFname());
+	}
 
-public void testnull(){
-final Customers cust=new Customers();
-cust.setFname("");
-assertTrue(cust.getFname() == "");
-}
->>>>>>> d42ad46982a3b12606b9a544c0ca4c67fc1e9546
+	@Test
+	public void testinput() {
+		final Customers cust = new Customers();
+		Integer mobile=456798;
+		assertTrue(cust.getMobile()==mobile);
+	}
 }

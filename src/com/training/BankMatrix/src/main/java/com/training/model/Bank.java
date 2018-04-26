@@ -10,13 +10,13 @@ import java.util.logging.Logger;
  *
  */
 public class Bank {
-final static Logger lps=Logger.getLogger(Bank.class.getName());
-/**
- * Displays name of the bank
- */
-public static void displayname()
-{
-final String name="Azores Bank";
-lps.info(name);
-}
+	final static Logger lps = Logger.getLogger(Bank.class.getName());
+
+	/**
+	 * Displays name of the bank
+	 */
+	public static void displayname() {
+		final String name = "Azores Bank";
+		lps.info(name);
+	}
 }
