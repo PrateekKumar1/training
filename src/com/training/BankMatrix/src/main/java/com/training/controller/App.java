@@ -32,8 +32,8 @@ public class App extends Bank {
 		displayname();
 		lps.info("\nCustomer Details\n");
 		ApplicationContext actx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		SavingsAccount e=(SavingsAccount)actx.getBean("e");
-		lps.info("\n"+e.getAccnumb()+"|"+e.getBalance()+"|"+e.getCust());
+		SavingsAccount sav=(SavingsAccount)actx.getBean("sav");
+		lps.info("\n"+sav.getAccnumb()+"|"+sav.getBalance()+"|"+sav.getCust());
 		lps.info("Enter the type of account");
 		lps.info("\n1>Savings Account\n2>Flexible Account\n3>Checking Account\t");
 		choice = read.nextInt();

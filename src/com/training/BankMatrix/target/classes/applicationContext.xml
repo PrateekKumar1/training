@@ -4,7 +4,7 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans  
                 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-	<bean id="Customers" class="com.training.Customers">
+	<bean id="Customers" class="com.training.model.Customers">
 		<property name="fname">
 			<value>Prateek</value>
 		</property>
@@ -33,7 +33,7 @@
 			<value>400708</value>
 		</property>
 	</bean>
-	<bean id="custm2" class="com.training.Customers">
+	<bean id="custm2" class="com.training.model.Customers">
 		<property name="fname">
 			<value>Aman</value>
 		</property>
@@ -62,7 +62,7 @@
 			<value>600023</value>
 		</property>
 	</bean>
-	<bean id="custm3" class="com.training.Customers">
+	<bean id="custm3" class="com.training.model.Customers">
 		<property name="fname">
 			<value>Rohan</value>
 		</property>
@@ -91,7 +91,7 @@
 			<value>490023</value>
 		</property>
 	</bean>
-	<bean id="e" class="com.training.Savings">
+	<bean id="sav" class="com.training.model.Savings">
 		<property name="balance">
 			<value>1000</value>
 		</property>

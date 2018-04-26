@@ -31,7 +31,7 @@ public class SavingsAccountTest {
 	 double  expbalance=1000; 
 	 assertTrue(sa.getBalance()==expbalance); 
 	 double exbal=2000;
-	 assertTrue(sa.getBalance()==exbal);
+	 assertTrue(sa.getBalance()!=exbal);
 	 }
 	
 	@Test
