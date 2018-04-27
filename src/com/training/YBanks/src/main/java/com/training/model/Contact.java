@@ -12,11 +12,30 @@ public class Contact {
 	String email;
 	int id = 0;
 	Address adress;
+	/**
+	 * @param mobile
+	 * @param email
+	 * @param adress
+	 */
 	Contact(int mobile, String email,Address adress) {
 		this.mobile = mobile;
 		this.email = email;
 		id = id++;
 		this.adress=adress;
+	}
+
+	/**
+	 * @return the adress
+	 */
+	public Address getAdress() {
+		return adress;
+	}
+
+	/**
+	 * @param adress the adress to set
+	 */
+	public void setAdress(Address adress) {
+		this.adress = adress;
 	}
 
 	/**

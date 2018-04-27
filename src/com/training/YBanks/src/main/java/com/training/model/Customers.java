@@ -4,6 +4,8 @@
 
 package com.training.model;
 
+import java.util.List;
+
 /**
  * @author PRATEEK KR
  *
@@ -13,13 +15,28 @@ public class Customers {
 	String fname;
 	String lname;
 	int id = 0;
-
-	Customers(String fname, String lname,Contact cntc) {
+	private List<Account> accl;
+	Customers(String fname, String lname,List<Account> accl,Contact cntc) {
 		super();
 		this.fname = fname;
 		this.lname = lname;
+		this.accl=accl;
 		this.cntc=cntc;
 		id = id++;
+	}
+
+	/**
+	 * @return the accl
+	 */
+	public List<Account> getAccl() {
+		return accl;
+	}
+
+	/**
+	 * @param accl the accl to set
+	 */
+	public void setAccl(List<Account> accl) {
+		this.accl = accl;
 	}
 
 	/**
@@ -79,10 +96,5 @@ public class Customers {
 	 */
 	public void setId(int id) {
 		this.id = id;
-	}
-	@Override
-	public String toString() {
-		return "Customer [firstName=" + fname + ", lastName=" + lname + ", customerId=" + id
-				+ ", contact=" + cntc + "]";
 	}
 }

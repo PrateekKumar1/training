@@ -13,11 +13,26 @@ public class Account {
 	Customers custm;
 	int accno;
 	int id = 0;
-
-	Account(int accno,Bank bnks, Customers custm) {
+	private String acctype;
+	Account(int accno,Bank bnks, Customers custm,String acctype) {
 		this.accno=accno;
 		this.custm=custm;
+		this.acctype=acctype;
 		id=id++;
+	}
+
+	/**
+	 * @return the acctype
+	 */
+	public String getAcctype() {
+		return acctype;
+	}
+
+	/**
+	 * @param acctype the acctype to set
+	 */
+	public void setAcctype(String acctype) {
+		this.acctype = acctype;
 	}
 
 	/**
