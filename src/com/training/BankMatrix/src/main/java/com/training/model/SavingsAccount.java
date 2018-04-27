@@ -50,13 +50,12 @@ public  class SavingsAccount implements Account {
 	/**
 	 * @return the accnumb
 	 */
-	public String getAccnumb() {
+	public String getaccnumb() {
 		return accnumb;
 	}
 
 	/**
-	 * @param accnumb
-	 *            the accnumb to set
+	 * @param 
 	 */
 	public void setAccnumb(String accnumb) {
 		this.accnumb = accnumb;
