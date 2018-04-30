@@ -9,21 +9,20 @@ package com.training.model;
  *
  */
 public class Goods {
-	private int id;
-	private String name;
+	private int goodid;
+	private String goodname;
 	private int qty;
 	private double price;
-
 	/**
-	 * @param id
-	 * @param name
+	 * @param goodid
+	 * @param goodname
 	 * @param qty
 	 * @param price
 	 */
-	public Goods(int id, String name, int qty, double price) {
+	public Goods(int goodid, String goodname, int qty, double price) {
 		super();
-		this.id = id;
-		this.name = name;
+		this.goodid = goodid;
+		this.goodname = goodname;
 		this.qty = qty;
 		this.price = price;
 	}
@@ -32,7 +31,7 @@ public class Goods {
 	 * @return the id
 	 */
 	public int getId() {
-		return id;
+		return goodid;
 	}
 
 	/**
@@ -40,14 +39,14 @@ public class Goods {
 	 *            the id to set
 	 */
 	public void setId(int id) {
-		this.id = id;
+		this.goodid = id;
 	}
 
 	/**
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return goodname;
 	}
 
 	/**
@@ -55,7 +54,7 @@ public class Goods {
 	 *            the name to set
 	 */
 	public void setName(String name) {
-		this.name = name;
+		this.goodname = name;
 	}
 
 	/**

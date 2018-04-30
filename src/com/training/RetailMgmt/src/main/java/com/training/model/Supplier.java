@@ -8,26 +8,19 @@ package com.training.model;
  *
  */
 public class Supplier {
-	private int id;
-	private String name;
-	private String address;
+	private int supplid;
+	private String supplname;
+	private String suppladdress;
 	private int qty;
 	private int orderid;
 	private double amt;
 
-	/**
-	 * @param id
-	 * @param name
-	 * @param address
-	 * @param qty
-	 * @param orderid
-	 * @param amt
-	 */
-	public Supplier(int id, String name, String address, int qty, int orderid, double amt) {
+
+	public Supplier(int supplid, String supplname, String suppladdress, int qty, int orderid, double amt) {
 		super();
-		this.id = id;
-		this.name = name;
-		this.address = address;
+		this.supplid = supplid;
+		this.supplname = supplname;
+		this.suppladdress = suppladdress;
 		this.qty = qty;
 		this.orderid = orderid;
 		this.amt = amt;
@@ -37,7 +30,7 @@ public class Supplier {
 	 * @return the id
 	 */
 	public int getId() {
-		return id;
+		return supplid;
 	}
 
 	/**
@@ -45,14 +38,14 @@ public class Supplier {
 	 *            the id to set
 	 */
 	public void setId(int id) {
-		this.id = id;
+		this.supplid = id;
 	}
 
 	/**
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return supplname;
 	}
 
 	/**
@@ -60,14 +53,14 @@ public class Supplier {
 	 *            the name to set
 	 */
 	public void setName(String name) {
-		this.name = name;
+		this.supplname = name;
 	}
 
 	/**
 	 * @return the address
 	 */
 	public String getAddress() {
-		return address;
+		return suppladdress;
 	}
 
 	/**
@@ -75,7 +68,7 @@ public class Supplier {
 	 *            the address to set
 	 */
 	public void setAddress(String address) {
-		this.address = address;
+		this.suppladdress = address;
 	}
 
 	/**

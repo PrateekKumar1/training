@@ -7,55 +7,59 @@ package com.training.model;
  * @author PRATEEK KR
  *
  */
+/**
+ * @author trainee
+ *
+ */
 public class Customer {
-	private int id;
-	private String name;
-	private String address;
+	private int custid;
+	private String custname;
+	private String custaddress;
 	private String paymode;
 
 	/**
 	 * @return the id
 	 */
 	public int getId() {
-		return id;
+		return custid;
 	}
 
 	/**
 	 * @param id
 	 *            the id to set
 	 */
-	public void setId(int id) {
-		this.id = id;
+	public void setId(int custid) {
+		this.custid = custid;
 	}
 
 	/**
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return custname;
 	}
 
 	/**
 	 * @param name
 	 *            the name to set
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String custname) {
+		this.custname = custname;
 	}
 
 	/**
 	 * @return the address
 	 */
 	public String getAddress() {
-		return address;
+		return custaddress;
 	}
 
 	/**
 	 * @param address
 	 *            the address to set
 	 */
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddress(String custaddress) {
+		this.custaddress = custaddress;
 	}
 
 	/**
@@ -73,17 +77,17 @@ public class Customer {
 		this.paymode = paymode;
 	}
 
-	/**
-	 * @param id
-	 * @param name
-	 * @param address
-	 * @param paymode
-	 */
-	public Customer(int id, String name, String address, String paymode) {
+		/**
+		 * @param custid
+		 * @param custname
+		 * @param custaddress
+		 * @param paymode
+		 */
+		public Customer(int custid, String custname, String custaddress, String paymode) {
 		super();
-		this.id = id;
-		this.name = name;
-		this.address = address;
+		this.custid = custid;
+		this.custname = custname;
+		this.custaddress = custaddress;
 		this.paymode = paymode;
 	}
 
