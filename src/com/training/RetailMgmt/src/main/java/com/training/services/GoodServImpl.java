@@ -4,6 +4,8 @@
 
 package com.training.services;
 
+import com.training.repo.GoodsRepo;
+
 /**
  * @author PRATEEK KR
  *
